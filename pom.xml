@@ -13,7 +13,7 @@
         <spring-security.version>3.2.0.M1</spring-security.version>
         <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
         <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
-        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+<!--        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>-->
     </properties>
     <packaging>war</packaging>
     <name>The eSira Project</name>
@@ -346,7 +346,7 @@
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
-                    <encoding>UTF-8</encoding>
+<!--                    <encoding>UTF-8</encoding>-->
                 </configuration>
             </plugin>
             <!-- Build war -->
