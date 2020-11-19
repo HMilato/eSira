@@ -1,5 +1,6 @@
 package esira.pauta;
 
+
 import entidade.EntPauta;
 import entidade.NotaPauta;
 import esira.dao.ConnectionFactory;
@@ -272,7 +273,7 @@ lbpauta.setModel(new ListModelList<>(lpauta));
 ////                if (p.getDocente1() == null) {
 //////                    lb1.setStyle("font-size:14px;color:red");
 //////                    lb1.setValue(new java.text.SimpleDateFormat("dd/MM/yyyy").format(p.getPautaPK().getDatap()));
-////                    ep.setNrealizado("Não relizado");
+////                    ep.setNrealizado("Nï¿½o relizado");
 ////                } else {
 //////                    lb1.setStyle("font-size:14px;color:blue");
 //////                    lb1.setValue(new java.text.SimpleDateFormat("dd/MM/yyyy").format(p.getPautaPK().getDatap()));

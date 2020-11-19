@@ -16,6 +16,7 @@
  it will be useful, but WITHOUT ANY WARRANTY.
  }}IS_RIGHT
  */
+ 
 package esira.webapp;
 
 import esira.domain.Faculdade;
@@ -510,7 +511,7 @@ public class MainLayoutComposer extends GenericForwardComposer implements
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(datactual);
         int anoActual = calendar.get(Calendar.YEAR);
-        bar.setValue("Todos Direitos Reservados © " + anoActual);
+        bar.setValue("Todos Direitos Reservados ï¿½ " + anoActual);
         //   Themes.setPriority("sapphire", 0);
     }
 

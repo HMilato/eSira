@@ -1,5 +1,6 @@
 package esira.pauta;
 
+
 import esira.domain.Curso;
 import esira.domain.Disciplina;
 import esira.domain.Funcionario;
@@ -707,7 +708,7 @@ public class PlanoavaliacaoController extends GenericForwardComposer {
         c.setHflex("1");
         c.setReadonly(true);
 //        c.addForward("onSelect", "self", "onSelectT");
-        c.setValue("---Selecione o tipo de Avaliação---");
+        c.setValue("---Selecione o tipo de Avaliaï¿½ï¿½o---");
 
         List<Div> divs = ((Div) formplano.getFellow("tiposavaliacao")).getChildren();
         //     List<Tipoavaliacao> list = new ArrayList<>();
@@ -754,7 +755,7 @@ public class PlanoavaliacaoController extends GenericForwardComposer {
         c.setHflex("1");
         c.setReadonly(true);
         c.addForward("onSelect", "self", "onSelectT");
-        c.setValue("---Selecione o tipo de Avaliação---");
+        c.setValue("---Selecione o tipo de Avaliaï¿½ï¿½o---");
         c.setModel(new ListModelList<>(csimp.getAll(Tipoavaliacao.class)));
         c.setParent(d);
         Intbox i = new Intbox();
@@ -773,7 +774,7 @@ public class PlanoavaliacaoController extends GenericForwardComposer {
         d.setParent(tiposavaliacao);
         String script = "jq('$" + i.getUuid() + "').find('input').Watermark('--Percentagem--','gray');jq('$" + i2.getUuid() + "').find('input').Watermark('--Quantidade--','gray');";
         Clients.evalJavaScript(script);
-        c.setConstraint(" no Empty: Seleccione um tipo de avalição!");
+        c.setConstraint(" no Empty: Seleccione um tipo de avaliï¿½ï¿½o!");
         i.setConstraint(" no Empty: Percentagem");
         i2.setConstraint(" no Empty: Quantidade");
     }
@@ -786,12 +787,12 @@ public class PlanoavaliacaoController extends GenericForwardComposer {
                 c.getParent().setId(((Tipoavaliacao) c.getSelectedItem().getValue()).getIdtipoavaliacao() + "");
             } catch (Exception e) {
                 c.setSelectedIndex(-1);
-                c.setValue("---Selecione o tipo de Avaliação---");
+                c.setValue("---Selecione o tipo de Avaliaï¿½ï¿½o---");
                 Clients.showNotification("Selecione outro tipo de avaliacao", "error", null, null, 3000);
             }
         } else {
             c.setSelectedIndex(-1);
-            c.setValue("---Selecione o tipo de Avaliação---");
+            c.setValue("---Selecione o tipo de Avaliaï¿½ï¿½o---");
         }
     }
 
@@ -803,7 +804,7 @@ public class PlanoavaliacaoController extends GenericForwardComposer {
     }
 
     public void onRefazer() {
-        Messagebox.show("Pretende refazer o plano de avaliação?", "Prompt", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende refazer o plano de avaliaï¿½ï¿½o?", "Prompt", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
             @Override
             public void onEvent(Event evet) {

@@ -1,5 +1,6 @@
 package esira.pauta;
 
+
 import esira.domain.Statuspauta;
 import esira.service.CRUDService;
 import java.util.ArrayList;

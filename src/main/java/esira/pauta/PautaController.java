@@ -1,5 +1,6 @@
 package esira.pauta;
 
+
 import entidade.EntPauta;
 import entidade.NotaPauta;
 import esira.dao.ConnectionFactory;
@@ -312,7 +313,7 @@ public class PautaController extends GenericForwardComposer {
                 if (p.getDocente1() == null) {
                     lb1.setStyle("font-size:14px;color:red");
                     lb1.setValue(new java.text.SimpleDateFormat("dd/MM/yyyy").format(p.getPautaPK().getDatap()));
-                    lb1.setValue("Não foi relizado");
+                    lb1.setValue("Nï¿½o foi relizado");
                 } else {
                     lb1.setStyle("font-size:14px;color:blue");
                     lb1.setValue(new java.text.SimpleDateFormat("dd/MM/yyyy").format(p.getPautaPK().getDatap()));
@@ -744,7 +745,7 @@ public class PautaController extends GenericForwardComposer {
                 Users usr = (Users) Sessions.getCurrent().getAttribute("user");
                 Users u = csimp.load(Users.class, usr.getUtilizador());
                 pauta.setDocente(u.getIdFuncionario().getDocente());
-                pauta.setDescricao("Pauta de Frequência");
+                pauta.setDescricao("Pauta de Frequï¿½ncia");
                 pauta.setOrdem(Short.parseShort("-1"));
                 pauta.setEdicao(0);
                 pauta.setTurno(ibturno.getValue());
@@ -944,7 +945,7 @@ public class PautaController extends GenericForwardComposer {
                     pa.setEditavel(false);
                 }
             } else if (ordem == -3 && pa.getClassexame() != null && !pa.getClassexame().isEmpty()
-                    && pa.getClassexame().equalsIgnoreCase("Recorrência")&&(notaextra==null||notaextra<10)) {
+                    && pa.getClassexame().equalsIgnoreCase("Recorrï¿½ncia")&&(notaextra==null||notaextra<10)) {
                 pa.setNota("MedFreq:" + pa.getNota1() + " " + "Admitido" + " NotaExam:" + pa.getNota2());
                 if (pa.getClassreq() != null && !pa.getClassreq().isEmpty()) {
                     pa.setNota2(rs.getFloat("notarec"));
@@ -1127,7 +1128,7 @@ public class PautaController extends GenericForwardComposer {
                 ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setStyle("color:blue;font-size:14px");
             } else {
                 if (ordem == -2) {
-                    ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrência");
+                    ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrï¿½ncia");
                     ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setStyle("font-weight:italic;color:red;font-size:14px");
                 } else {
                     ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Reprovado");
@@ -1165,7 +1166,7 @@ public class PautaController extends GenericForwardComposer {
                         ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setStyle("color:blue;font-size:14px");
                     } else {
                         if (ordem == -2) {
-                            ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrência");
+                            ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrï¿½ncia");
                             ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setStyle("font-weight:italic;color:red;font-size:14px");
                         } else {
                             ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Reprovado");
@@ -1193,7 +1194,7 @@ public class PautaController extends GenericForwardComposer {
             nexame = o.getCodigo().floatValue();
 
             if (nexame == -1 && ordem == -2) {
-                ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrência");
+                ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Recorrï¿½ncia");
                 ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setStyle("font-weight:italic;color:red;font-size:14px");
             } else {
                 ((Label) li.getLastChild().getPreviousSibling().getFirstChild()).setValue("Reprovado");
