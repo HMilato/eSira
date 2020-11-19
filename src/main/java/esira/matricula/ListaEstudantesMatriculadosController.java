@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -314,7 +314,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
     }
 
 //    public void onInvalidar(final ForwardEvent event) throws Exception {
-//        Messagebox.show("Invalidar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//        Messagebox.show("Invalidar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                new EventListener() {
 //                    @Override
 //                    public void onEvent(Event evet) {
@@ -349,7 +349,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         winMot.setParent(winlestudantes);
         winMot.setTitle("Mudar a turma do estudante");
         winMot.doModal();
-        ((Textbox) winMot.getFellow("txMotivo")).setText("A sua matricula foi rejeitada.\n Os seus dados estão incorrectos");
+        ((Textbox) winMot.getFellow("txMotivo")).setText("A sua matricula foi rejeitada.\n Os seus dados estï¿½o incorrectos");
     }
 
     public void onFecharmot() {
@@ -357,7 +357,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
     }
 
     public void onRejeitarMat() {
-        Messagebox.show("Invalidar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Invalidar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws InterruptedException, IOException, EmailException {
@@ -427,7 +427,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         Listitem litem = (Listitem) event.getOrigin().getTarget().getParent().getParent().getParent();
         Matricula todo = (Matricula) litem.getValue();
         if (todo.getMatriculaanulada() != null && todo.getAnulada() == false) {
-            Clients.showNotification("Este Estudante tem um pedido de Anulação de Matrícula pendente!", "warning", null, null, 0);
+            Clients.showNotification("Este Estudante tem um pedido de Anulaï¿½ï¿½o de Matrï¿½cula pendente!", "warning", null, null, 0);
         }
         final HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("nome", todo.getEstudante().getNomeCompleto());
@@ -448,7 +448,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         Estudante e = todo.getEstudante();
         if (e.getGraduado() != null && e.getGraduado() == true) {
             Messagebox.show("O Estudante ja pertence a lista dos graduados! /n"
-                    + "Pretende retirar-lo da lista dos graduados?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                    + "Pretende retirar-lo da lista dos graduados?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -470,7 +470,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
                         }
                     });
         } else {
-            Messagebox.show("O Estudante sera movido para a lista dos graduados?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("O Estudante sera movido para a lista dos graduados?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -683,7 +683,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
 
     public void onExcelExport() throws ParseException {
         if (lbEstudantes.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();
@@ -722,7 +722,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         });
         b.setAttribute("apply", "esira.matricula.ListaEstudantesMatriculadosController");
         b.setParent(vb);
-        w.setTitle("Observações");
+        w.setTitle("Observaï¿½ï¿½es");
         w.setId("winx");
         w.setClosable(true);
         w.setHflex("min");
@@ -738,7 +738,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         final Matricula m = csimpm.load(Matricula.class, new MatriculaPK(it2.getValue(), it.getValue()));
         Textbox obs = (Textbox) evt.getTarget().getParent().getChildren().get(0);
         m.setObs(obs.getValue());
-        Messagebox.show("Actualizar?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Actualizar?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws IOException {
@@ -827,7 +827,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         par.put("fac", todo.getCurso().getFaculdade());
         PlanificacaoAnoLectivo planificacaoAnoLectivo = csimpm.findEntByJPQuery("from PlanificacaoAnoLectivo p where p.faculdade = :fac", par);
         if (planificacaoAnoLectivo == null) {
-            Clients.showNotification("Não foi encontrado um plano de matriculas para " + todo.getCurso().getFaculdade(), "error", null, null, 3000);
+            Clients.showNotification("Nï¿½o foi encontrado um plano de matriculas para " + todo.getCurso().getFaculdade(), "error", null, null, 3000);
             return;
         }
         if (planificacaoAnoLectivo != null) {
@@ -901,7 +901,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
             } else {
                 //  Messagebox.show("Periodo de Multa 30 dias = " + planificacaoAnoLectivo.getPercentagemMultaMatricula30dias());
 //                if (usr.getUestudante()) {
-//                    Clients.showNotification("Periodo de Matricula encerrado! Por favor contacte a Direção...", "warning", null, null, 0);
+//                    Clients.showNotification("Periodo de Matricula encerrado! Por favor contacte a Direï¿½ï¿½o...", "warning", null, null, 0);
 //                    return;
 //                }
                 final HashMap<String, Object> map = new HashMap<String, Object>();
@@ -949,7 +949,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         // Prescricao pre = csimpm.findEntByJPQuery("from Prescricao p where p.inscricaodisciplina.inscricao.idEstudante = :ide"
         //         + " and p.estado is true", par);
         //  if (pre != null) {
-        //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderá Matricular depois de regularizar", "error", null, null, 0);
+        //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderï¿½ Matricular depois de regularizar", "error", null, null, 0);
         //      win.detach();
         //  }
         Bolsa bols = estudante.getBolsa();
@@ -1436,7 +1436,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
         if (true) {
             return;
         }
-        Messagebox.show("Mudar a turma do estudante?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Mudar a turma do estudante?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) {
@@ -1459,7 +1459,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
 
     public void onSalvarPlano(ForwardEvent event) throws Exception {
         if (((Curso) cbcurso2.getSelectedItem().getValue()).getIdCurso().intValue() != oldcurso.getValue().intValue()) {
-            Messagebox.show("Mudar o curso do Estudante?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("Mudar o curso do Estudante?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -1528,7 +1528,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
                         }
                     });
         } else if (oldplano.getValue().intValue() != ((Planocurricular) cbplano.getSelectedItem().getValue()).getPlanocurricularPK().getAno()) {
-            Messagebox.show("Mudar o Plano curricular do Estudante?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("Mudar o Plano curricular do Estudante?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -1560,7 +1560,7 @@ public class ListaEstudantesMatriculadosController extends GenericForwardCompose
 
     public void onSalvarNivel(ForwardEvent event) throws Exception {
         if (ibnivel.getValue().intValue() != oldnivel.getValue().intValue()) {
-            Messagebox.show("Mudar o Nivel?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("Mudar o Nivel?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {

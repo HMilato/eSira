@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.dao;
 
@@ -10,7 +10,7 @@ package esira.dao;
  */
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 
 import java.sql.Connection;

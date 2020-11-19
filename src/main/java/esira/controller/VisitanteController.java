@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -281,7 +281,7 @@ public class VisitanteController extends GenericForwardComposer {
 
     public void verificarMatricula(Estudante e) {
         if (e.getMatriculaList().size() > 1) {
-            Clients.showNotification("O estudante deverá aceder a sua conta", null, null, null, 0);
+            Clients.showNotification("O estudante deverï¿½ aceder a sua conta", null, null, null, 0);
             return;
         }
         lbest.setValue(e.getNomeCompleto() + "   --" + e.getCursocurrente().getDescricao());
@@ -372,8 +372,8 @@ public class VisitanteController extends GenericForwardComposer {
                         mudarcurso = true;
                     } else {
                         Clients.showNotification("O Candidato que se pretende Matricular ja existe no Sistema. "
-                                + "Se ainda não mudou de curso, poderá recandidatar-se com um outro curso "
-                                + "(Com a permissão da direcção!)", null, null, null, 2000);
+                                + "Se ainda nï¿½o mudou de curso, poderï¿½ recandidatar-se com um outro curso "
+                                + "(Com a permissï¿½o da direcï¿½ï¿½o!)", null, null, null, 2000);
                         return;
                     }
                 } else {
@@ -389,7 +389,7 @@ public class VisitanteController extends GenericForwardComposer {
         String fn = c.getFaculdade().getDesricao();
         PlanificacaoAnoLectivo planificacaoAnoLectivo = csimpm.findEntByJPQuery("from PlanificacaoAnoLectivo p where p.faculdade = :fac", par);
         if(planificacaoAnoLectivo==null){
-            Clients.showNotification("Não foi encontrado um plano de matriculas para "+fn, "error", null, null, 3000);
+            Clients.showNotification("Nï¿½o foi encontrado um plano de matriculas para "+fn, "error", null, null, 3000);
             return;
         }
         if (dano.before(planificacaoAnoLectivo.getDatainicioInscricao())) {
@@ -476,7 +476,7 @@ public class VisitanteController extends GenericForwardComposer {
 //            }
         } else {
             Clients.showNotification("Periodo de Matricula encerrado."
-                    + "Contacte a direção da Faculdade que pretende ingressar", "warning", null, null, 0, true);
+                    + "Contacte a direï¿½ï¿½o da Faculdade que pretende ingressar", "warning", null, null, 0, true);
             return;
         }
     }

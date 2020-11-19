@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.service;
 
@@ -165,10 +165,10 @@ public class EnviarEmailRecibo extends HttpServlet {
                         try {
                             try {
                                 new Email().sendEmailReciboMat(getServletContext(), csimp, UserAutentic.getEmailP2("email", getServletContext()),
-                                        estudante.getEmail(), "Validação de Matricula", "Caro Estudante " + estudante.getNomeCompleto() + ""
+                                        estudante.getEmail(), "Validaï¿½ï¿½o de Matricula", "Caro Estudante " + estudante.getNomeCompleto() + ""
                                         + "\nA sua matricula foi validada com Sucesso\n"
                                         + s + "\n\n------------------------------------------\n\n\n"
-                                        + "Registo Acadêmico - UniLúrio-" + fa.getDesricao(),
+                                        + "Registo Acadï¿½mico - UniLï¿½rio-" + fa.getDesricao(),
                                         UserAutentic.getEmailP2("senha", getServletContext()), path + "/icoul.png", mat);
                                 mat = csimp.get(Matricula.class, new MatriculaPK(par.getId1(), par.getId2()));
                                 mat.setEmailenviado(true);
@@ -201,7 +201,7 @@ public class EnviarEmailRecibo extends HttpServlet {
                                     estudante.getEmail(), "Matricula Rejeitada", "Caro Estudante " + mat.getEstudante().getNomeCompleto() + ""
                                     + "\nA sua matricula foi rejeitada!"
                                     + "\n" + mot + "\n\n\n----------------------------------------\n\n\n"
-                                    + "Registo Acadêmico - UniLúrio-" + fa.getDesricao(),
+                                    + "Registo Acadï¿½mico - UniLï¿½rio-" + fa.getDesricao(),
                                     UserAutentic.getEmailP2("senha", getServletContext()));
                         } catch (Exception ex) {
                             Logger.getLogger(EnviarEmailRecibo.class.getName()).log(Level.SEVERE, null, ex);
@@ -219,9 +219,9 @@ public class EnviarEmailRecibo extends HttpServlet {
                         List<Inscricaodisciplina> lid = csimp.findByJPQuery("from Inscricaodisciplina id where id.inscricao = :i and id.estado is true", cpar);
                         try {
                             new Email().sendEmailReciboInsc(getServletContext(), csimp, UserAutentic.getEmailP2("email", getServletContext()),
-                                    i.getIdEstudante().getEmail(), "Validação de Inscrição", "Caro Estudante " + estudante.getNomeCompleto() + ""
-                                    + "\nA sua Inscrição foi validada com Sucesso\n\n----------------------------------------\n\n\n"
-                                    + "Registo Acadêmico - UniLúrio-" + f.getFaculdade().getDesricao(),
+                                    i.getIdEstudante().getEmail(), "Validaï¿½ï¿½o de Inscriï¿½ï¿½o", "Caro Estudante " + estudante.getNomeCompleto() + ""
+                                    + "\nA sua Inscriï¿½ï¿½o foi validada com Sucesso\n\n----------------------------------------\n\n\n"
+                                    + "Registo Acadï¿½mico - UniLï¿½rio-" + f.getFaculdade().getDesricao(),
                                     UserAutentic.getEmailP2("senha", getServletContext()), path + "/icoul.png", i, lid);
                             i = csimp.get(Inscricao.class, new Long(par.getId1()));
                             i.setEmailenviado(true);
@@ -247,10 +247,10 @@ public class EnviarEmailRecibo extends HttpServlet {
                         }
                         try {
                             new Email().sendEmail(UserAutentic.getEmailP2("email", getServletContext()),
-                                    i.getIdEstudante().getEmail(), "Inscrição Rejeitada!", "Caro Estudante " + estudante.getNomeCompleto() + ""
+                                    i.getIdEstudante().getEmail(), "Inscriï¿½ï¿½o Rejeitada!", "Caro Estudante " + estudante.getNomeCompleto() + ""
                                     + "\nA sua Inscricao foi rejeitada\n" + mot + "\n"
                                     + "\n\n----------------------------------------\n\n\n"
-                                    + "Registo Acadêmico - UniLúrio-" + f.getFaculdade().getDesricao(),
+                                    + "Registo Acadï¿½mico - UniLï¿½rio-" + f.getFaculdade().getDesricao(),
                                     UserAutentic.getEmailP2("senha", getServletContext()));
                         } catch (EmailException ex) {
                             Logger.getLogger(EnviarEmailRecibo.class.getName()).log(Level.SEVERE, null, ex);

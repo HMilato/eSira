@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -451,7 +451,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
             } else {
                 //  Messagebox.show("Periodo de Multa 30 dias = " + planificacaoAnoLectivo.getPercentagemMultaMatricula30dias());
                 if (usr.getUestudante()) {
-                    Clients.showNotification("Periodo de Matricula encerrado! Por favor contacte a Direção...", "warning", null, null, 0);
+                    Clients.showNotification("Periodo de Matricula encerrado! Por favor contacte a Direï¿½ï¿½o...", "warning", null, null, 0);
                     return;
                 }
                 final HashMap<String, Object> map = new HashMap<String, Object>();
@@ -499,7 +499,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
        // Prescricao pre = csimpm.findEntByJPQuery("from Prescricao p where p.inscricaodisciplina.inscricao.idEstudante = :ide"
       //          + " and p.estado is true", par);
        // if (pre != null) {
-       //     Clients.showNotification("O estudante prescreveu uma disciplina! So poderá Matricular depois de regularizar", "error", null, null, 0);
+       //     Clients.showNotification("O estudante prescreveu uma disciplina! So poderï¿½ Matricular depois de regularizar", "error", null, null, 0);
        //     win.detach();
        // }
         Bolsa bols = estudante.getBolsa();
@@ -919,7 +919,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
                     Matriculaanulada ma = m.getMatriculaanulada();
                     if (ma != null) {
                         if (ma.getDataconfirmacao() == null) {
-                            lba.setValue("O Seu pedido para anular a Matricula foi enviado. \n Por favor aguarde a confirmação...");
+                            lba.setValue("O Seu pedido para anular a Matricula foi enviado. \n Por favor aguarde a confirmaï¿½ï¿½o...");
                             btnAnular.setVisible(false);
                         } else if (!ma.getEstado()) {
                             winanularmot.setVisible(true);
@@ -1116,7 +1116,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
 
     public void onExcelExportMatAnul() throws ParseException {
         if (lbAnulcao.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();
@@ -1132,7 +1132,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
 
         if (e.getGraduado() != null && e.getGraduado() == true) {
             Messagebox.show("O Estudante ja pertence a lista dos graduados! /n"
-                    + "Pretende retirar-lo da lista dos graduados?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                    + "Pretende retirar-lo da lista dos graduados?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -1154,7 +1154,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
                         }
                     });
         } else {
-            Messagebox.show("O Estudante sera movido para a lista dos graduados?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("O Estudante sera movido para a lista dos graduados?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -1204,7 +1204,7 @@ public class ListaEstudantesController extends GenericForwardComposer {
     }
 
     public void onSalvarTurma(ForwardEvent event) throws Exception {
-        Messagebox.show("Mudar a turma do estudante?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Mudar a turma do estudante?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) {

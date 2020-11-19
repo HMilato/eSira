@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -295,7 +295,7 @@ public class ListaAdmissaoController extends GenericForwardComposer {
     public void onGuardarLista() {
         if (!camposnulo()) {
 
-            validation.setValue("Todos os campos São de preenchimento Obrigatório");
+            validation.setValue("Todos os campos Sï¿½o de preenchimento Obrigatï¿½rio");
             return;
         }
         try {
@@ -424,7 +424,7 @@ public class ListaAdmissaoController extends GenericForwardComposer {
                 mat = la.getIdEstudante().getMatriculaList().get(0);
                 mat = csimpm.load(Matricula.class, mat.getMatriculaPK());
                 if (mat.getConfirmacao() == null) {
-                    Clients.showNotification("Este candidato tem uma matricula não Confirmada", "warning", null, null, 0);
+                    Clients.showNotification("Este candidato tem uma matricula nï¿½o Confirmada", "warning", null, null, 0);
                     return;
                 }
                 dano = mat.getDataMatricula();
@@ -443,8 +443,8 @@ public class ListaAdmissaoController extends GenericForwardComposer {
                     mudarcurso = true;
                 } else {
                     Clients.showNotification("O Candidato que se pretende Matricular ja existe no Sistema. "
-                            + "Se ainda não mudou de curso, poderá recandidatar-se com um outro curso "
-                            + "(Com a permissão da direcção!)", "warning", null, null, 0);
+                            + "Se ainda nï¿½o mudou de curso, poderï¿½ recandidatar-se com um outro curso "
+                            + "(Com a permissï¿½o da direcï¿½ï¿½o!)", "warning", null, null, 0);
                     return;
                 }
             }
@@ -456,7 +456,7 @@ public class ListaAdmissaoController extends GenericForwardComposer {
         par.put("fac", la.getCurso().getFaculdade());
         PlanificacaoAnoLectivo planificacaoAnoLectivo = csimpm.findEntByJPQuery("from PlanificacaoAnoLectivo p where p.faculdade = :fac", par);
         if (planificacaoAnoLectivo == null) {
-            Clients.showNotification("Não foi encontrado um plano de matriculas para " + la.getCurso().getFaculdade(), "error", null, null, 3000);
+            Clients.showNotification("Nï¿½o foi encontrado um plano de matriculas para " + la.getCurso().getFaculdade(), "error", null, null, 3000);
             return;
         }
         if (planificacaoAnoLectivo != null) {
@@ -794,7 +794,7 @@ public class ListaAdmissaoController extends GenericForwardComposer {
     }
 
     public void onEliminar(final ForwardEvent evt) throws Exception {
-        Messagebox.show("Apagar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Apagar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
             @Override
             public void onEvent(Event evet) {
@@ -1344,7 +1344,7 @@ public class ListaAdmissaoController extends GenericForwardComposer {
 
     public void onExcelExport() throws ParseException {
         if (lbplm.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();

@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -338,7 +338,7 @@ public class GradenotasController extends GenericForwardComposer {
 
     public void onExcelExport() throws ParseException {
         if (lbgnotas.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();

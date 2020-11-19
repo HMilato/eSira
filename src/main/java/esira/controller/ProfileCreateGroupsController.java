@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -194,7 +194,7 @@ public class ProfileCreateGroupsController extends GenericForwardComposer {
         } else {
             final List<Roles> li2 = new ArrayList<Roles>();
             li2.addAll(li);
-            Messagebox.show("Modificar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+            Messagebox.show("Modificar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                     new EventListener() {
                         @Override
                         public void onEvent(Event evet) {
@@ -305,7 +305,7 @@ public class ProfileCreateGroupsController extends GenericForwardComposer {
 
     private void addGroupConstraint() {
         txtGrupo.setConstraint(" no Empty: Insira o Nome do grupo!");
-        txtDesc.setConstraint(" no Empty: Insira a Descrição do grupo!");
+        txtDesc.setConstraint(" no Empty: Insira a Descriï¿½ï¿½o do grupo!");
     }
 
     public void onError$txtDesc() {

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -730,7 +730,7 @@ public class PlanoCurricularController2 extends GenericForwardComposer {
 //    }
 //
 //    public void onDeleteDiscip(final ForwardEvent evt) throws Exception {
-//        Messagebox.show("Apagar?", "Conirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//        Messagebox.show("Apagar?", "Conirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                new EventListener() {
 //                    @Override
 //                    public void onEvent(Event evet) {
@@ -924,7 +924,7 @@ public class PlanoCurricularController2 extends GenericForwardComposer {
     }
 
 //    public void onApagarPrec(final ForwardEvent evt) {
-//        Messagebox.show("Pretende eliminar a precedencia?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//        Messagebox.show("Pretende eliminar a precedencia?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                new EventListener() {
 //                    @Override
 //                    public void onEvent(Event evet) {
@@ -1005,7 +1005,7 @@ public class PlanoCurricularController2 extends GenericForwardComposer {
 
 //    public void onSelPrec(final ForwardEvent evt) {
 //        final Combobox cb = (Combobox) evt.getOrigin().getTarget();
-//        Messagebox.show("Pretende modificar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//        Messagebox.show("Pretende modificar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                new EventListener() {
 //                    @Override
 //                    public void onEvent(Event evet) {
@@ -1271,7 +1271,7 @@ public class PlanoCurricularController2 extends GenericForwardComposer {
 //    }
     public void onExcelExportDisc() throws ParseException {
         if (lbDiscip.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -122,7 +122,7 @@ public class PedidoAnularMatController extends GenericForwardComposer {
         par.put("ide", mpk);
         Matriculaanulada ma = csimpm.findEntByJPQuery("from Matriculaanulada ma where ma.matriculaPK=:ide", par);
         if (ma.getRequerimento() == null) {
-            Clients.showNotification("Não existe documento", "warning", null, null, 2000);
+            Clients.showNotification("Nï¿½o existe documento", "warning", null, null, 2000);
             return;
         }
         String nre = ma.getMatricula().getEstudante().getNrEstudante();
@@ -134,13 +134,13 @@ public class PedidoAnularMatController extends GenericForwardComposer {
         Media pp = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), iss);
         Media mm = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), pp.getByteData());
         Window win = (Window) Executions.createComponents("/report.zul", null, null);
-        win.setTitle("Requerimento/Anulação de Matricula");
+        win.setTitle("Requerimento/Anulaï¿½ï¿½o de Matricula");
         Iframe iframe = (Iframe) win.getFellow("report");
         iframe.setContent(mm);
     }
 
     public void onClick$btnCnf() {
-        Messagebox.show("Pretende validar este Pedido de Anulação de Matricula?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende validar este Pedido de Anulaï¿½ï¿½o de Matricula?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws InterruptedException {
@@ -170,10 +170,10 @@ public class PedidoAnularMatController extends GenericForwardComposer {
                                             + "extract(year from id.inscricao.dataInscricao) = :a and (id.notaFinal is null or id.notaFinal < 10) and "
                                             + "id.disciplinaActiva = 3", par);
                                     if (!lid.isEmpty()) {
-                                        Messagebox.show("As Inscrições feitas no 2o Semestre serão anuladas.\n"
-                                                + "Para não anular as Inscrições feitas no 2o Semestre, Por favor introduza as notas Finais,"
+                                        Messagebox.show("As Inscriï¿½ï¿½es feitas no 2o Semestre serï¿½o anuladas.\n"
+                                                + "Para nï¿½o anular as Inscriï¿½ï¿½es feitas no 2o Semestre, Por favor introduza as notas Finais,"
                                                 + "se estiverem disponiveis\n\n"
-                                                + "CONTINUAR?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
+                                                + "CONTINUAR?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
                                                 new EventListener() {
                                                     @Override
                                                     public void onEvent(Event evet) throws IOException {
@@ -197,10 +197,10 @@ public class PedidoAnularMatController extends GenericForwardComposer {
                                             + "extract(year from id.inscricao.dataInscricao) = :a and (id.notaFinal is null or id.notaFinal < 10) and "
                                             + "id.disciplinaActiva = 3", par);
                                     if (!lid.isEmpty()) {
-                                        Messagebox.show("As Inscrições feitas no 1o Semestre serão anuladas.\n"
-                                                + "Para não anular as Inscrições feitas no 1o Semestre, Por favor introduza as notas Finais,"
+                                        Messagebox.show("As Inscriï¿½ï¿½es feitas no 1o Semestre serï¿½o anuladas.\n"
+                                                + "Para nï¿½o anular as Inscriï¿½ï¿½es feitas no 1o Semestre, Por favor introduza as notas Finais,"
                                                 + "se estiverem disponiveis\n\n"
-                                                + "CONTINUAR?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
+                                                + "CONTINUAR?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
                                                 new EventListener() {
                                                     @Override
                                                     public void onEvent(Event evet) throws IOException {
@@ -260,7 +260,7 @@ public class PedidoAnularMatController extends GenericForwardComposer {
             eq = EventQueues.lookup("anula" + da.getIdEstudante().getIdEstudante(), EventQueues.APPLICATION, true);
             eq.publish(new Event("onPedidoMat", null, lid.get(0).getInscricao()));
         }
-        Clients.showNotification("A Anulação de Matricula foi validada com Sucesso", null, null, null, 2000);
+        Clients.showNotification("A Anulaï¿½ï¿½o de Matricula foi validada com Sucesso", null, null, null, 2000);
 //        new Listbox().appendChild(((Listbox) winAnularM.getParent().getFellow("lbPAnulMat"))
 //                .getItemAtIndex(idlitem.getValue()));
         eq = EventQueues.lookup("rmatA" + f.getIdFaculdade(), EventQueues.APPLICATION, true);
@@ -274,7 +274,7 @@ public class PedidoAnularMatController extends GenericForwardComposer {
         winAddMotivoPM.setParent(winAnularM);
         winAddMotivoPM.doModal();
         ((Intbox) winAddMotivoPM.getFellow("idest")).setValue(ide.getValue());
-        ((Textbox) winAddMotivoPM.getFellow("txMotivoR")).setText("O Seu Pedido de Anulação de Matricula foi rejeitado.\n Os seus dados estão incorrectos");
+        ((Textbox) winAddMotivoPM.getFellow("txMotivoR")).setText("O Seu Pedido de Anulaï¿½ï¿½o de Matricula foi rejeitado.\n Os seus dados estï¿½o incorrectos");
 
     }
 
@@ -287,7 +287,7 @@ public class PedidoAnularMatController extends GenericForwardComposer {
     }
 
     public void onBtnRjt() {
-        Messagebox.show("Pretende Rejeitar este Pedido de Anulação de Matricula?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende Rejeitar este Pedido de Anulaï¿½ï¿½o de Matricula?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws InterruptedException, IOException, EmailException {
@@ -305,7 +305,7 @@ public class PedidoAnularMatController extends GenericForwardComposer {
                                 Faculdade f = csimpm.get(Faculdade.class, usr.getFaculdade().getIdFaculdade());
                                 ma.setFuncionario(u.getIdFuncionario());
                                 csimpm.update(ma);
-                                Clients.showNotification("Pedido de Anulação de Matricula Rejeitado com Sucesso", null, null, null, 2000);
+                                Clients.showNotification("Pedido de Anulaï¿½ï¿½o de Matricula Rejeitado com Sucesso", null, null, null, 2000);
 //                                new Listbox().appendChild(((Listbox) winAddMotivoPM.getParent().getParent().getFellow("lbPAnulMat"))
 //                                        .getItemAtIndex(((Intbox) winAddMotivoPM.getParent().getFellow("idlitem")).getValue()));
                                 eq = EventQueues.lookup("rmatA" + f.getIdFaculdade(), EventQueues.APPLICATION, true);

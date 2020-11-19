@@ -1,6 +1,6 @@
  /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -274,7 +274,7 @@ public class PermissaoController extends GenericForwardComposer {
     }
 
     public void onDeletePerm(final ForwardEvent evt) throws Exception {
-        Messagebox.show("Apagar?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Apagar?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) {
@@ -298,10 +298,10 @@ public class PermissaoController extends GenericForwardComposer {
 
     public void onTestEmail() throws IOException, MessagingException, DocumentException, BadElementException, JRException {
         new Email().SendMailSSL(UserAutentic.getEmailP("email"),
-                tbemail.getText(), "Validação de Matricula", "Prezado "
+                tbemail.getText(), "Validaï¿½ï¿½o de Matricula", "Prezado "
                 + "\nA sua matricula foi validada com Sucesso\n"
                 + "" + "\n\n----------------------------------------\n\n\n"
-                + "Registo Acadêmico - UniLúrio-",
+                + "Registo Acadï¿½mico - UniLï¿½rio-",
                 UserAutentic.getEmailP("senha"), winPermissao.getDesktop().getWebApp().getRealPath("/img"));
     }
 

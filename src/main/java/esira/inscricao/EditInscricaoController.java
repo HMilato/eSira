@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -223,7 +223,7 @@ public class EditInscricaoController extends GenericForwardComposer {
     public void onCreate$winInscricaoP(Event evt) {
         if (winInscricaoP.inModal()) {
             winInscricaoP.setMode("modal");
-            winInscricaoP.setTitle("Validação de Inscrições");
+            winInscricaoP.setTitle("Validaï¿½ï¿½o de Inscriï¿½ï¿½es");
             winInscricaoP.setClosable(true);
             winInscricaoP.setVflex("1");
             winInscricaoP.setHflex("1");
@@ -265,7 +265,7 @@ public class EditInscricaoController extends GenericForwardComposer {
 //        LockMode l = csimpm.bloqueado(insc);
 //        Clients.showNotification(l.toString(), "warning", null, null, 0, true);
 //        if (l.compareTo(LockMode.PESSIMISTIC_WRITE) == 0) {
-//            Clients.showNotification("Esta Inscrição esta sendo Validada por outro utilizador", "warning", null, null, 0);
+//            Clients.showNotification("Esta Inscriï¿½ï¿½o esta sendo Validada por outro utilizador", "warning", null, null, 0);
 //            return;
 //        } else {
 //            //insc = csimpm.getLocked(Inscricao.class,insc.getIdInscricao());
@@ -276,7 +276,7 @@ public class EditInscricaoController extends GenericForwardComposer {
 //        Clients.showNotification(l.toString(), "warning", null, null, 0, true);
 //        insc = csimpm.load(Inscricao.class, insc.getIdInscricao());
         if (insc.getModoInscricao().intValue() > 2) {
-            Clients.showNotification("Esta Inscricao será validada pelo Director! Caso for aceite, poderá ser visualizada na Lista de Inscrições", "warning", null, null, 0);
+            Clients.showNotification("Esta Inscricao serï¿½ validada pelo Director! Caso for aceite, poderï¿½ ser visualizada na Lista de Inscriï¿½ï¿½es", "warning", null, null, 0);
             return;
         }
         winAddInscricao.setParent(winInscricaoP);
@@ -314,7 +314,7 @@ public class EditInscricaoController extends GenericForwardComposer {
         Listbox discs = ((Listbox) winAddInscricao.getFellow("discSel"));
         limpaLB(discs);
         for (Disciplina d : lds) {
-            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
+            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
 //            list.setDisabled(true);
 //            list.setCheckable(false);
 //            discs.setMultiple(false);
@@ -549,7 +549,7 @@ public class EditInscricaoController extends GenericForwardComposer {
 //                + " id where id.inscricao.idEstudante = :ide and id.inscricao.semestre = :semestre and "
 //                + "extract(year from id.inscricao.dataInscricao) = :ano)", par);
 //        for (Disciplina d : lds) {
-//            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
+//            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
 //            list.setDisabled(true);
 //            list.setCheckable(false);
 //            discSel.setMultiple(false);
@@ -564,7 +564,7 @@ public class EditInscricaoController extends GenericForwardComposer {
         int a = 0;
         List<Integer> niv = new ArrayList<Integer>();
 //        if (discEst.getSelectedItems().isEmpty() && discEstOp.getSelectedItems().isEmpty()) {
-//            Clients.showNotification("Seleccione as disciplinas para a inscrição", "error", null, null, 0);
+//            Clients.showNotification("Seleccione as disciplinas para a inscriï¿½ï¿½o", "error", null, null, 0);
 //            return;
 //        }
 //        if (Integer.parseInt(lbcred.getValue()) > 30) {
@@ -864,7 +864,7 @@ public class EditInscricaoController extends GenericForwardComposer {
                                         i.setVersion(new Short(ver + ""));
                                     }
                                 } else {
-                                    Clients.showNotification("Esta Inscrição foi Editada por um outro utilizador\n"
+                                    Clients.showNotification("Esta Inscriï¿½ï¿½o foi Editada por um outro utilizador\n"
                                             + "Repita de novo", "warning", null, null, 0);
                                     //  t.rollback();
                                     winAddInscricao.detach();
@@ -972,7 +972,7 @@ public class EditInscricaoController extends GenericForwardComposer {
     public void onRejeitar(ForwardEvent event) throws IOException {
         winAddMotivoI.setParent(winAddInscricao);
         winAddMotivoI.doModal();
-        ((Textbox) winAddMotivoI.getFellow("txMotivoR")).setText("A sua Inscrição foi rejeitada.\n Os seus dados estão incorrectos");
+        ((Textbox) winAddMotivoI.getFellow("txMotivoR")).setText("A sua Inscriï¿½ï¿½o foi rejeitada.\n Os seus dados estï¿½o incorrectos");
     }
 
     public void onBtnC() {
@@ -1001,7 +1001,7 @@ public class EditInscricaoController extends GenericForwardComposer {
                                             i.setVersion(new Short(ver + ""));
                                         }
                                     } else {
-                                        Clients.showNotification("Esta Inscrição ja foi Validada por outro utilizador", "warning", null, null, 0);
+                                        Clients.showNotification("Esta Inscriï¿½ï¿½o ja foi Validada por outro utilizador", "warning", null, null, 0);
                                         t.rollback();
                                         winAddInscricao.detach();
                                         winAddMotivoI.getParent().detach();
@@ -1024,15 +1024,15 @@ public class EditInscricaoController extends GenericForwardComposer {
                                     csimpm.updates(m);
                                     try {
                                         new Email().sendEmail(UserAutentic.getEmailP("email"),
-                                                i.getIdEstudante().getEmail(), "Inscrição Rejeitada!", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
+                                                i.getIdEstudante().getEmail(), "Inscriï¿½ï¿½o Rejeitada!", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
                                                 + "\nA sua Inscricao foi rejeitada\n" + m.getMotivo() + "\n"
                                                 + "\n\n----------------------------------------\n\n\n"
-                                                + "Registo Acadêmico - UniLúrio-" + f.getDesricao(),
+                                                + "Registo Acadï¿½mico - UniLï¿½rio-" + f.getDesricao(),
                                                 UserAutentic.getEmailP("senha"));
                                     } catch (EmailException uh) {
                                         Clients.showNotification("O Envio de e-mail Falhou!", "warning", null, null, 0, true);
                                     }
-                                    Clients.showNotification("Iscrição Rejeitada com Sucesso", null, null, null, 2000);
+                                    Clients.showNotification("Iscriï¿½ï¿½o Rejeitada com Sucesso", null, null, null, 2000);
                                     ///////////
                                     if (i.getModoInscricao().intValue() != 0) {
                                         String tipopedido = "";

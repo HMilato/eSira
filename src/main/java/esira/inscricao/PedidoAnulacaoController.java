@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -193,14 +193,14 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
         Listbox lbo = ((Listbox) winVAnulacao.getFellow("lbd"));
         for (Inscricaodisciplina id : da.getInscricaodisciplinaList()) {
             Disciplina d = id.getDisciplina();
-            lbo.appendChild(new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d));
+            lbo.appendChild(new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d));
         }
     }
 
     public void onVerRequerimento(Event evt) throws FileNotFoundException, IOException {
         Disciplinaanulada da = csimpm.load(Disciplinaanulada.class, idanul.getValue());
         if (da.getDoc() == null) {
-            Clients.showNotification("Não existe documento", "warning", null, null, 2000);
+            Clients.showNotification("Nï¿½o existe documento", "warning", null, null, 2000);
             return;
         }
         String nre = da.getIdEstudante().getNrEstudante();
@@ -211,13 +211,13 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
         Media pp = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), iss);
         Media mm = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), pp.getByteData());
         Window win = (Window) Executions.createComponents("/report.zul", null, null);
-        win.setTitle("Requerimento/Anulação de Inscrição");
+        win.setTitle("Requerimento/Anulaï¿½ï¿½o de Inscriï¿½ï¿½o");
         Iframe iframe = (Iframe) win.getFellow("report");
         iframe.setContent(mm);
     }
 
     public void onClick$btnCnf() {
-        Messagebox.show("Pretende validar este Pedido de Anulação de Inscrição?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende validar este Pedido de Anulaï¿½ï¿½o de Inscriï¿½ï¿½o?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws InterruptedException {
@@ -237,7 +237,7 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
                                     idis.setAnulacao(da);
                                     csimpm.update(idis);
                                 }
-                                Clients.showNotification("A Anulação de Inscrição foi validada com Sucesso", null, null, null, 2000);
+                                Clients.showNotification("A Anulaï¿½ï¿½o de Inscriï¿½ï¿½o foi validada com Sucesso", null, null, null, 2000);
 //                                new Listbox().appendChild(((Listbox) winVAnulacao.getParent().getFellow("lbpanularInsc"))
 //                                        .getItemAtIndex(idlitem.getValue()));
                                 eq = EventQueues.lookup("rinscA" + f.getIdFaculdade(), EventQueues.APPLICATION, true);
@@ -258,7 +258,7 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
         winAddMotivo.setParent(winVAnulacao);
         winAddMotivo.doModal();
         ((Intbox) winAddMotivo.getFellow("ibidInsc")).setValue(idanul.getValue());
-        ((Textbox) winAddMotivo.getFellow("txMotivoR")).setText("O Seu Pedido de Anulação de Inscrição foi rejeitado.\n Os seus dados estão incorrectos");
+        ((Textbox) winAddMotivo.getFellow("txMotivoR")).setText("O Seu Pedido de Anulaï¿½ï¿½o de Inscriï¿½ï¿½o foi rejeitado.\n Os seus dados estï¿½o incorrectos");
 
     }
 
@@ -271,7 +271,7 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
     }
 
     public void onBtnRjt() {
-        Messagebox.show("Pretende Rejeitar este Pedido de Anulação de Inscrição?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende Rejeitar este Pedido de Anulaï¿½ï¿½o de Inscriï¿½ï¿½o?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws InterruptedException, IOException, EmailException {
@@ -285,7 +285,7 @@ public class PedidoAnulacaoController extends GenericForwardComposer {
                                 da.setEstado(false);
                                 da.setMotivo(txMotivoR.getValue());
                                 csimpm.update(da);
-                                Clients.showNotification("Pedido de Anulação de Inscrição Rejeitado com Sucesso", null, null, null, 2000);
+                                Clients.showNotification("Pedido de Anulaï¿½ï¿½o de Inscriï¿½ï¿½o Rejeitado com Sucesso", null, null, null, 2000);
 //                                new Listbox().appendChild(((Listbox) winAddMotivo.getParent().getParent().getFellow("lbpanularInsc"))
 //                                        .getItemAtIndex(((Intbox) winAddMotivo.getParent().getFellow("idlitem")).getValue()));
                                 eq = EventQueues.lookup("rinscA" + f.getIdFaculdade(), EventQueues.APPLICATION, true);

@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -331,7 +331,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
 //                    + " and p.estado is true", par);
 //            if (p != null) {
 //                t.rollback();
-//                Clients.showNotification("O estudante prescreveu uma disciplina! So poderá se inscrever depois de regularizar", "error", null, null, 0);
+//                Clients.showNotification("O estudante prescreveu uma disciplina! So poderï¿½ se inscrever depois de regularizar", "error", null, null, 0);
 //                return;
 //            }
             ca.set(Calendar.YEAR, ibano.getValue());
@@ -349,14 +349,14 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
             } else {
                 if (!chEst.isChecked()) {
                     t.rollback();
-                    Clients.showNotification("O Estudante não esta matriculado!", "error", null, null, 0);
+                    Clients.showNotification("O Estudante nï¿½o esta matriculado!", "error", null, null, 0);
                     return;
                 }
             }
             //ibano.getValue() < e.getAnoIngresso() || 
             if (ibano.getValue() > ano) {
                 t.rollback();
-                Clients.showNotification("Seleccione um Ano válido!", "error", null, null, 0);
+                Clients.showNotification("Seleccione um Ano vï¿½lido!", "error", null, null, 0);
                 return;
             }
             i = new Inscricao();
@@ -483,7 +483,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
             }
             if (ibano2.getValue() > ano) {
                 t.rollback();
-                Clients.showNotification("Seleccione um Ano válido!", "error", null, null, 0);
+                Clients.showNotification("Seleccione um Ano vï¿½lido!", "error", null, null, 0);
                 return;
             }
             Disciplina d = (Disciplina) cbdisciplina.getSelectedItem().getValue();
@@ -512,7 +512,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
 //                        + " and p.estado is true", par);
 //                if (p != null) {
 //                    t.rollback();
-//                    Clients.showNotification("O estudante \"" + e.getNomeCompleto() + "\" prescreveu uma disciplina! So poderá se inscrever depois de regularizar", "error", null, null, 0);
+//                    Clients.showNotification("O estudante \"" + e.getNomeCompleto() + "\" prescreveu uma disciplina! So poderï¿½ se inscrever depois de regularizar", "error", null, null, 0);
 //                    return;
 //                }
 
@@ -530,7 +530,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
                 } else {
                     if (!chDisc.isChecked()) {
                         t.rollback();
-                        Clients.showNotification("O Estudante \"" + e.getNomeCompleto() + "\" não esta matriculado!", "error", null, null, 0);
+                        Clients.showNotification("O Estudante \"" + e.getNomeCompleto() + "\" nï¿½o esta matriculado!", "error", null, null, 0);
                         return;
                     }
                 }
@@ -538,7 +538,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
                 if (ibano.getValue() < e.getAnoIngresso()) {
                     //ca.set(Calendar.YEAR, e.getAnoIngresso());
                     t.rollback();
-                    Clients.showNotification("O Ano seleccionado é inválido para o Estudante: " + e.getNomeCompleto() + "!", "error", null, null, 0);
+                    Clients.showNotification("O Ano seleccionado ï¿½ invï¿½lido para o Estudante: " + e.getNomeCompleto() + "!", "error", null, null, 0);
                     return;
                 } else {
                     ca.set(Calendar.YEAR, ibano2.getValue());
@@ -842,7 +842,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
             e.setNivelFrequencia(anoing);
             csimpm.update(e);
 
-            Clients.showNotification("Equivalência registada com sucesso", null, null, null, 2000);
+            Clients.showNotification("Equivalï¿½ncia registada com sucesso", null, null, null, 2000);
             winInscEq.detach();
             t.commit();
             /// lbestu.clearSelection();
@@ -979,7 +979,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
             Constraint c = null;
             dbs.setConstraint(c);
 //            if (dbs.getValue() != null) {
-                Messagebox.show("Desseleccionar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                Messagebox.show("Desseleccionar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                         new EventListener() {
                             @Override
                             public void onEvent(Event evet) {
@@ -1014,7 +1014,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
 //            dbs.setConstraint(c);
 //            final Listitem lo = li;
 ////            if (dbs.getValue() != null) {
-//                Messagebox.show("Desseleccionar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//                Messagebox.show("Desseleccionar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                        new EventListener() {
 //                            @Override
 //                            public void onEvent(Event evet) {
@@ -1052,7 +1052,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
                         Constraint c = null;
                         dbs.setConstraint(c);
                         if (true) {
-                            Messagebox.show("Desseleccionar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                            Messagebox.show("Desseleccionar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                                     new EventListener() {
                                         @Override
                                         public void onEvent(Event evet) {
@@ -1091,7 +1091,7 @@ public class InscricaoEstudanteController extends GenericForwardComposer {
                 Constraint c = null;
                 dbs.setConstraint(c);
 //                if (dbs.getValue() != null) {
-                    Messagebox.show("Desseleccionar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                    Messagebox.show("Desseleccionar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                             new EventListener() {
                                 @Override
                                 public void onEvent(Event evet) {

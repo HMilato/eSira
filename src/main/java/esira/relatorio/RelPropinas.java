@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.relatorio;
 
@@ -230,7 +230,7 @@ public class RelPropinas extends GenericForwardComposer {
 
                 if (dano.after(planificacaoAnoLectivo.getDataFimMatriculaE2())) {
                     Clients.showNotification("Periodo de Matricula encerrado."
-                            + "É necessário uma permissão", "warning", null, null, 0, true);
+                            + "ï¿½ necessï¿½rio uma permissï¿½o", "warning", null, null, 0, true);
                     return;
                 }
             }

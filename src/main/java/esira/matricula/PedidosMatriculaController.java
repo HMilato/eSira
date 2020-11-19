@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -218,7 +218,7 @@ public class PedidosMatriculaController extends GenericForwardComposer {
         Matricula todo = (Matricula) litem.getValue();
         todo = csimpm.load(Matricula.class, todo.getMatriculaPK());
         if (todo.getModoMatricula() == 3) {
-            Clients.showNotification("Esta Matricula será validada pelo Director! Caso for aceite, poderá ser visualizada na Lista de Matriculas", "warning", null, null, 0);
+            Clients.showNotification("Esta Matricula serï¿½ validada pelo Director! Caso for aceite, poderï¿½ ser visualizada na Lista de Matriculas", "warning", null, null, 0);
             return;
         }
         preMatricular(todo, litem);

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -244,7 +244,7 @@ public class RenovarMatriculaController extends GenericForwardComposer {
     //TAB 3 HISTORIAL ACADEMICO------------------------------------------------
     public void onClick$btnAvancar3() {
         if (camposNulosHA()) {
-            validation.setValue("Preencha todos campos * do Historial Académico");
+            validation.setValue("Preencha todos campos * do Historial Acadï¿½mico");
         } else {
             validation.setValue("");
             tabEstudante.setSelectedTab(tabDadosEconomicos);
@@ -253,7 +253,7 @@ public class RenovarMatriculaController extends GenericForwardComposer {
 
     public void onClick$tabHA() {
         if (camposNulosDP()) {
-            validation.setValue("Preencha todos campos * do Historial Académico");
+            validation.setValue("Preencha todos campos * do Historial Acadï¿½mico");
             tabEstudante.setSelectedTab(tabDadosPessoais);
             return;
         }
@@ -272,7 +272,7 @@ public class RenovarMatriculaController extends GenericForwardComposer {
     //TAB 4 DADOS ECONOMICOS------------------------------------------------
     public void onClick$btnAvancar4() {
         if (camposNulosDE()) {
-            validation.setValue("Preencha todos campos * dos Dados Económicos");
+            validation.setValue("Preencha todos campos * dos Dados Econï¿½micos");
         } else {
             validation.setValue("");
             tabEstudante.setSelectedTab(tabDocumentacao);
@@ -291,7 +291,7 @@ public class RenovarMatriculaController extends GenericForwardComposer {
             return;
         }
         if (camposNulosHA()) {
-            validation.setValue("Preencha todos campos * do Historial Académico");
+            validation.setValue("Preencha todos campos * do Historial Acadï¿½mico");
             tabEstudante.setSelectedTab(tabHA);
             return;
         }
@@ -347,12 +347,12 @@ public class RenovarMatriculaController extends GenericForwardComposer {
             return;
         }
         if (camposNulosHA()) {
-            validation.setValue("Preencha todos campos * do Historial Académico");
+            validation.setValue("Preencha todos campos * do Historial Acadï¿½mico");
             tabEstudante.setSelectedTab(tabHA);
             return;
         }
         if (camposNulosDE()) {
-            validation.setValue("Preencha todos campos * dos Dados Económicos");
+            validation.setValue("Preencha todos campos * dos Dados Econï¿½micos");
             tabEstudante.setSelectedTab(tabDadosEconomicos);
             return;
         }
@@ -365,7 +365,7 @@ public class RenovarMatriculaController extends GenericForwardComposer {
 
     public void onClick$btnAvancar5() {
         if (camposNulosDoc()) {
-            validation.setValue("Preencha todos campos * da Documenta?ão");
+            validation.setValue("Preencha todos campos * da Documenta?ï¿½o");
         } else {
             validation.setValue("");
             calcularTotal();
@@ -389,17 +389,17 @@ public class RenovarMatriculaController extends GenericForwardComposer {
             return;
         }
         if (camposNulosHA()) {
-            validation.setValue("Preencha todos campos * do Historial Académico");
+            validation.setValue("Preencha todos campos * do Historial Acadï¿½mico");
             tabEstudante.setSelectedTab(tabHA);
             return;
         }
         if (camposNulosDE()) {
-            validation.setValue("Preencha todos campos * dos Dados Económicos");
+            validation.setValue("Preencha todos campos * dos Dados Econï¿½micos");
             tabEstudante.setSelectedTab(tabDadosEconomicos);
             return;
         }
         if (camposNulosDoc()) {
-            validation.setValue("Preencha todos campos * da Documenta?ão");
+            validation.setValue("Preencha todos campos * da Documenta?ï¿½o");
             tabEstudante.setSelectedTab(tabDocumentacao);
             return;
         }

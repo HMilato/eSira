@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 import esira.domain.Token;
@@ -62,9 +62,9 @@ public class RecuperacaoController extends GenericForwardComposer {
     Textbox txNome, txBI, txCont, txEmail;
     Intbox idl, ide, ibidEstudante, ibano;
     String token,tokenR, senha = "milaboss", from="helder.milato@gmail.com",  htmlText;
-    String msg = "Não existe nenhum usuario com este email no Sistema", type="error", posicao="middle_center";
-    String       msgErroConexao = "Não foi possível enviar o email, por favor verifique a sua Internet";
-    String msgSucesso = "Enviamos para o seu email as instruções"
+    String msg = "Nï¿½o existe nenhum usuario com este email no Sistema", type="error", posicao="middle_center";
+    String       msgErroConexao = "Nï¿½o foi possï¿½vel enviar o email, por favor verifique a sua Internet";
+    String msgSucesso = "Enviamos para o seu email as instruï¿½ï¿½es"
             + " de como recuperar a sua senha";
     int duracao = 0;
     Label bar;
@@ -144,10 +144,10 @@ public class RecuperacaoController extends GenericForwardComposer {
                            Multipart multiPart = new MimeMultipart("alternative");
 
                            BodyPart messageBodyPart = new MimeBodyPart();
-                           String htmlText = "<h1>Saudações "+us.getNome()+" </h1> \n" +
-                           "<h2>Recebemos um pedido de recuperação de senha, se não foi você, "
+                           String htmlText = "<h1>Saudaï¿½ï¿½es "+us.getNome()+" </h1> \n" +
+                           "<h2>Recebemos um pedido de recuperaï¿½ï¿½o de senha, se nï¿½o foi vocï¿½, "
                            + "por favor ignore este e-mail,</h1>\n" +
-                            "<h2>mas se foi você por favor pressione no botão abaixo. Atenção: Tem no maximo 15 minutos para terminar esse processo</h2>\n" 
+                            "<h2>mas se foi vocï¿½ por favor pressione no botï¿½o abaixo. Atenï¿½ï¿½o: Tem no maximo 15 minutos para terminar esse processo</h2>\n" 
                             +"<a href=\"http://localhost:8082/esira/recuperacaoSenha/novaSenha.zul?tokenR="+tokenR+"\"><button style=\"background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; font-size: 16px;\">Recuperar Senha</button></a>";
                            messageBodyPart.setContent(htmlText, "text/html");
                            multiPart.addBodyPart(messageBodyPart);
@@ -158,7 +158,7 @@ public class RecuperacaoController extends GenericForwardComposer {
                            message.setRecipients(Message.RecipientType.TO,
                                    InternetAddress.parse(txEmail.getText()));
                            System.out.println(txEmail.getText());
-                           message.setSubject("Recuperação de Senha ");
+                           message.setSubject("Recuperaï¿½ï¿½o de Senha ");
                            transport.sendMessage(message, InternetAddress.parse(txEmail.getText()));
                            System.out.println("Done");
                            Clients.showNotification(msgSucesso, "info", null, posicao, duracao, true);    
@@ -169,7 +169,7 @@ public class RecuperacaoController extends GenericForwardComposer {
                            throw new RuntimeException(e);
                            
                           
-              //Clients.showNotification("Enviamos as instrucoes de recuperação de senha para o seu email"); 
+              //Clients.showNotification("Enviamos as instrucoes de recuperaï¿½ï¿½o de senha para o seu email"); 
         }
     }
                         

@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -133,7 +133,7 @@ public class PlanoMatriculaController extends GenericForwardComposer {
 //-------------Salvar novo plano
     public void onSalvarPlano() {
         if (!camposNnuloInscricao()) {
-            validation.setValue("Preencha todos campos de Inscrição");
+            validation.setValue("Preencha todos campos de Inscriï¿½ï¿½o");
             return;
         } else {
             if (datafimEpoca1.getValue().compareTo(dataInicio.getValue()) < 0
@@ -204,10 +204,10 @@ public class PlanoMatriculaController extends GenericForwardComposer {
 //        String path = winmain.getDesktop().getWebApp().getRealPath("/img");
 //                                try {
 //                                    new Email().sendEmailReciboMat(UserAutentic.getEmailP("email"),
-//                                            "ussimaria@gmail.com", "Validação de Matricula", "Prezado " + mat.getEstudante().getNomeCompleto() + ""
+//                                            "ussimaria@gmail.com", "Validaï¿½ï¿½o de Matricula", "Prezado " + mat.getEstudante().getNomeCompleto() + ""
 //                                            + "\nA sua matricula foi validada com Sucesso\n"
 //                                             + "\n\n----------------------------------------\n\n\n"
-//                                            + "Registo Acadêmico - UniLúrio-" + u.getFaculdade().getDesricao(),
+//                                            + "Registo Acadï¿½mico - UniLï¿½rio-" + u.getFaculdade().getDesricao(),
 //                                            UserAutentic.getEmailP("senha"), path + "/icoul.png", mat);
 //                                } catch (EmailException uh) {
 //                                    Clients.showNotification("O Envio de e-mail Falhou!", "warning", null, null, 0, true);

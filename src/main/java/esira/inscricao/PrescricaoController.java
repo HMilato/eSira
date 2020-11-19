@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -275,7 +275,7 @@ public class PrescricaoController extends GenericForwardComposer {
 //        return new ListModelList<Inscricaodisciplina>(le);
 //    }
     public void onEditPresc(final ForwardEvent evt) throws Exception {
-        Messagebox.show("Regularizar a prescrição?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Regularizar a prescriï¿½ï¿½o?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) {
@@ -310,7 +310,7 @@ public class PrescricaoController extends GenericForwardComposer {
     public void onAddPresc() {
 //        Constraint k = null;
 //        winAddPresc.setParent(winEstPrec);
-//        winAddPresc.setTitle("Nova Prescrição");
+//        winAddPresc.setTitle("Nova Prescriï¿½ï¿½o");
 //        winAddPresc.doModal();
 ////        Combobox cb = (Combobox) winAddPresc.getFellow("cbdisciplina");
 ////        Constraint c2 = cb.getConstraint();
@@ -385,7 +385,7 @@ public class PrescricaoController extends GenericForwardComposer {
 
     public void onSalvar() {
         if (cbinscricao.getSelectedCount() == 0) {
-            Clients.showNotification(" Por favor seleccione uma inscrição!", "error", null, null, 0);
+            Clients.showNotification(" Por favor seleccione uma inscriï¿½ï¿½o!", "error", null, null, 0);
             return;
         }
         Inscricaodisciplina id = ((Inscricaodisciplina) cbinscricao.getSelectedItem().getValue());
@@ -397,7 +397,7 @@ public class PrescricaoController extends GenericForwardComposer {
         Users u = csimp.get(Users.class, usr.getUtilizador());
         p.setOperador(u.getIdFuncionario());
         if (dabdatai.getValue().after(id.getInscricao().getDataInscricao())) {
-            Clients.showNotification(" A data da Inscrição antecedente deve ser inferior que a data da última inscrição!", "error", null, null, 0);
+            Clients.showNotification(" A data da Inscriï¿½ï¿½o antecedente deve ser inferior que a data da ï¿½ltima inscriï¿½ï¿½o!", "error", null, null, 0);
             return;
         }
         p.setDatai(dabdatai.getValue());
@@ -484,11 +484,11 @@ public class PrescricaoController extends GenericForwardComposer {
 
     public void onExcelExport() throws ParseException {
         if (lbinscdisc.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();
-        beanToExcel.setDataSheetName("Estudantes com Prescrição");
+        beanToExcel.setDataSheetName("Estudantes com Prescriï¿½ï¿½o");
         beanToExcel.exportExcell(lbinscdisc);
     }
 

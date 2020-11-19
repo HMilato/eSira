@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.service;
 
@@ -49,7 +49,7 @@ import org.zkoss.zul.Messagebox;
  * estudante/curso Estudantes sem numero, numero de estudante mal escrito com
  * espacos 20132004333: Numero de estudante inventado Teodoro Augusto Torres e
  * numa das suas disciplinas nao tinha ano paulino raul tambem tem anos em
- * falta; Número do estudante-20152004025
+ * falta; Nï¿½mero do estudante-20152004025
  *
  * Tenho que ter a lista de estudantes que ja mudaram de curso
  */
@@ -133,7 +133,7 @@ public class Populardados {
                     if (ss.charAt(0) == ' ') {
                         ss = s.substring(s.indexOf(":") + 2);
                     }
-                    int ind = ss.indexOf("Número");
+                    int ind = ss.indexOf("Nï¿½mero");
                     if (ind != -1) {
                         nome = ss.substring(0, ind - 1);
 
@@ -149,7 +149,7 @@ public class Populardados {
                         }
                         do {
                             s = bufReader.readLine();
-                        } while (!s.contains("Número"));
+                        } while (!s.contains("Nï¿½mero"));
                         //  Messagebox.show(s);
                         nr = s.substring(s.indexOf(":") + 1);
                         if (nr.charAt(0) == ' ') {
@@ -178,13 +178,13 @@ public class Populardados {
 
                     while (!s.contains("Pemba,")) {
                         s = bufReader.readLine();
-                        if (s.contains("Ano da realização da disciplina")) {
+                        if (s.contains("Ano da realizaï¿½ï¿½o da disciplina")) {
                             while (!s.contains("Pemba,")) {
                                 s = bufReader.readLine();
-                                if (s.contains("Ano da realização da disciplina")) {
+                                if (s.contains("Ano da realizaï¿½ï¿½o da disciplina")) {
                                     s = bufReader.readLine();
-                                    if (!s.contains("Introdução à Engenharia*")) {
-                                        //   if(s.contains("MÉDIA FINAL")) break;
+                                    if (!s.contains("Introduï¿½ï¿½o ï¿½ Engenharia*")) {
+                                        //   if(s.contains("Mï¿½DIA FINAL")) break;
                                         par.clear();
                                         par.put("cu", "%" + c + "%");
                                         Curso cu = csimpm.findEntByJPQuery("from Curso c where c.descricao like :cu", par);

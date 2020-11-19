@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -340,11 +340,11 @@ public class DocenteDiscController extends GenericForwardComposer {
 
     public void onExcelExportLista() throws ParseException {
         if (lbdocdisc.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();
-        beanToExcel.setDataSheetName("Distribuicao de Serviço Docente - " + ((Curso) cbCursoPrec.getSelectedItem().getValue()).getDescricao() + " " + cbSemPrec.getSelectedItem().getLabel());
+        beanToExcel.setDataSheetName("Distribuicao de Serviï¿½o Docente - " + ((Curso) cbCursoPrec.getSelectedItem().getValue()).getDescricao() + " " + cbSemPrec.getSelectedItem().getLabel());
         beanToExcel.exportExcell(lbdocdisc);
     }
 
@@ -521,7 +521,7 @@ public class DocenteDiscController extends GenericForwardComposer {
     }
 
     public void onEliminar(final ForwardEvent evt) throws Exception {
-        Messagebox.show("Apagar?", "Confirmação", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Apagar?", "Confirmaï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
             @Override
             public void onEvent(Event evet) {

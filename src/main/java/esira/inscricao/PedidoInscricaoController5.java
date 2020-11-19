@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -300,7 +300,7 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
 //        par.put("ide", mpk);
 //        Matricula m = (Matricula) csimpm.findEntByJPQuery("from Matricula m where m.matriculaPK=:ide", par);
 //        if (m != null && (m.getConfirmacao() == null || m.getEstado() == false)) {
-//            Clients.showNotification(" Antes de validar uma inscriçaão, é necessário validar a matricula", "warning", null, null, 0);
+//            Clients.showNotification(" Antes de validar uma inscriï¿½aï¿½o, ï¿½ necessï¿½rio validar a matricula", "warning", null, null, 0);
 //            return;
 //        }
         Messagebox.show("Pretende validar este Pedido de Inscricao?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
@@ -326,7 +326,7 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
                                             i.setVersion(new Short(ver + ""));
                                         }
                                     } else {
-                                        Clients.showNotification("Esta Inscrição ja foi Validada por outro utilizador", "warning", null, null, 0);
+                                        Clients.showNotification("Esta Inscriï¿½ï¿½o ja foi Validada por outro utilizador", "warning", null, null, 0);
                                         t.rollback();
                                         winAddInsc.detach();
                                         return;
@@ -454,9 +454,9 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
 //                                try {
 //                                    String path = winInscricaoP.getDesktop().getWebApp().getRealPath("/img");
 //                                    new Email().sendEmailReciboInsc(UserAutentic.getEmailP("email"),
-//                                            i.getIdEstudante().getEmail(), "Validação de Inscrição", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
-//                                            + "\nA sua Inscrição foi validada com Sucesso\n\n----------------------------------------"
-//                                            + "Registo Acadêmico - UniLúrio-" + u.getFaculdade().getDesricao(),
+//                                            i.getIdEstudante().getEmail(), "Validaï¿½ï¿½o de Inscriï¿½ï¿½o", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
+//                                            + "\nA sua Inscriï¿½ï¿½o foi validada com Sucesso\n\n----------------------------------------"
+//                                            + "Registo Acadï¿½mico - UniLï¿½rio-" + u.getFaculdade().getDesricao(),
 //                                            UserAutentic.getEmailP("senha"), path + "/icoul.png", i, i.getInscricaodisciplinaList());
 //                                } catch (EmailException uh) {
 //                                    Clients.showNotification("O Envio de e-mail Falhou!", "warning", null, null, 0, true);
@@ -575,7 +575,7 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
         final HashMap<String, Object> map = new HashMap<String, Object>();
         map.put("controler", "esira.inscricao.PedidoInscricaoController5");
         Window w = (Window) Executions.createComponents("/inscricao/MotivoInsc.zul", winAddInsc, map);
-        ((Textbox) w.getFellow("txMotivoR")).setText("A sua Inscrição foi rejeitada.\n Os seus dados estão incorrectos");
+        ((Textbox) w.getFellow("txMotivoR")).setText("A sua Inscriï¿½ï¿½o foi rejeitada.\n Os seus dados estï¿½o incorrectos");
     }
 
     public void onBtnC() {
@@ -607,7 +607,7 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
                                             i.setVersion(new Short(ver + ""));
                                         }
                                     } else {
-                                        Clients.showNotification("Esta Inscrição ja foi Validada por outro utilizador", "warning", null, null, 0);
+                                        Clients.showNotification("Esta Inscriï¿½ï¿½o ja foi Validada por outro utilizador", "warning", null, null, 0);
                                         t.rollback();
                                         // winAddInscricaop.detach();
                                         winAddMotivo.getParent().detach();
@@ -667,7 +667,7 @@ public class PedidoInscricaoController5 extends GenericForwardComposer {
                                         }
                                         csimpm.deletes(i);
                                     }
-                                    Clients.showNotification("Iscrição Rejeitada com Sucesso", null, null, null, 2000);
+                                    Clients.showNotification("Iscriï¿½ï¿½o Rejeitada com Sucesso", null, null, null, 2000);
                                     t.commit();
                                     while (!t.wasCommitted())
             ;

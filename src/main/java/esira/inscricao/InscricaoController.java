@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -572,7 +572,7 @@ public class InscricaoController extends GenericForwardComposer {
     public void onCreate$winInscricao(Event evt) {
         if (winInscricao.inModal()) {
             winInscricao.setMode("modal");
-            winInscricao.setTitle("Inscrição");
+            winInscricao.setTitle("Inscriï¿½ï¿½o");
             winInscricao.setClosable(true);
             winInscricao.setContentStyle("overflow:auto");
             winInscricao.setSizable(true);
@@ -696,7 +696,7 @@ public class InscricaoController extends GenericForwardComposer {
             par.put("mpk", mpk);
             Matricula m = csimpm.findEntByJPQuery("from Matricula m where m.matriculaPK = :mpk", par);
             if (m == null) {
-                Clients.showNotification("O Estudante não esta Matriculado", "error", null, null, 0);
+                Clients.showNotification("O Estudante nï¿½o esta Matriculado", "error", null, null, 0);
                 //limpaLB(discSel);
                 winAddInscricao.detach();
                 return;
@@ -706,7 +706,7 @@ public class InscricaoController extends GenericForwardComposer {
             //  Prescricao p = csimpm.findEntByJPQuery("from Prescricao p where p.inscricaodisciplina.inscricao.idEstudante = :ide"
             //          + " and p.estado is true", par);
             //  if (p != null) {
-            //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderá se inscrever depois de regularizar", "error", null, null, 0);
+            //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderï¿½ se inscrever depois de regularizar", "error", null, null, 0);
             //limpaLB(discSel);
             //      winAddInscricao.detach();
             //     return;
@@ -775,7 +775,7 @@ public class InscricaoController extends GenericForwardComposer {
 //                    }
 //                } else {
 //                    winAddInscricao.detach();
-//                    Clients.showNotification("Esta fora do prazo de inscrição. Por favor contacte a Direcção", "error", null, null, 0);
+//                    Clients.showNotification("Esta fora do prazo de inscriï¿½ï¿½o. Por favor contacte a Direcï¿½ï¿½o", "error", null, null, 0);
 //                }
 //            }
         } else {
@@ -801,8 +801,8 @@ public class InscricaoController extends GenericForwardComposer {
 //                Inscricaodisciplina id = csimpm.findEntByJPQuery("from Inscricaodisciplina id where id.inscricao.idEstudante = :e"
 //                        + " and id.disciplinaActiva = 3 and id.estado is true", par);
 //                if (id == null) {
-//                    Clients.showNotification("Antes de se inscrever, faça equivalência das suas disciplinas."
-//                            + "Entre em contacto com a Direção da sua Faculdade", "warning", null, null, 0);
+//                    Clients.showNotification("Antes de se inscrever, faï¿½a equivalï¿½ncia das suas disciplinas."
+//                            + "Entre em contacto com a Direï¿½ï¿½o da sua Faculdade", "warning", null, null, 0);
 //                    winAddInscricao.detach();
 //                    return;
 //                }
@@ -1017,7 +1017,7 @@ public class InscricaoController extends GenericForwardComposer {
             par.put("ide", mpk);
             Matricula mat = csimpm.findEntByJPQuery("from Matricula m where m.matriculaPK=:ide", par);
             if (mat.getConfirmacao() == null || mat.getEstado() == false) {
-                Clients.showNotification("A matricula do Estudante ainda não esta confirmada!", "error", null, null, 0);
+                Clients.showNotification("A matricula do Estudante ainda nï¿½o esta confirmada!", "error", null, null, 0);
                 limpaLB(discEstOp);
                 limpaLB(discSel);
                 return;
@@ -1027,7 +1027,7 @@ public class InscricaoController extends GenericForwardComposer {
             //  Prescricao p = csimpm.findEntByJPQuery("from Prescricao p where p.inscricaodisciplina.inscricao.idEstudante = :ide"
             //          + " and p.estado is true", par);
             //  if (p != null) {
-            //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderá se inscrever depois de regularizar", "error", null, null, 0);
+            //      Clients.showNotification("O estudante prescreveu uma disciplina! So poderï¿½ se inscrever depois de regularizar", "error", null, null, 0);
             //     limpaLB(discEstOp);
             //     limpaLB(discSel);
             //      return;
@@ -1066,8 +1066,8 @@ public class InscricaoController extends GenericForwardComposer {
 //                return;
 //            } else {
 //                winAddInscricao.detach();
-//                Clients.showNotification("Antes de se inscrever, faça equivalencia das suas disciplinas."
-//                        + "Entre em contacto com a Direção da sua Faculdade actual", "warning", null, null, 0);
+//                Clients.showNotification("Antes de se inscrever, faï¿½a equivalencia das suas disciplinas."
+//                        + "Entre em contacto com a Direï¿½ï¿½o da sua Faculdade actual", "warning", null, null, 0);
 //                return;
 //            }
 //        }
@@ -1115,23 +1115,23 @@ public class InscricaoController extends GenericForwardComposer {
             // Messagebox.show(dtaxa2+"");
             if (dano.before(dtaxa1)) {
                 //      Messagebox.show("sem 1");
-                Clients.showNotification("Por favor aguarde o periodo de Inscrição!", "warning", null, null, 0);
+                Clients.showNotification("Por favor aguarde o periodo de Inscriï¿½ï¿½o!", "warning", null, null, 0);
                 limpaLB(discEstOp);
                 limpaLB(discSel);
                 winAddInscricao.detach();
             } else if ((ano == e.getAnoIngresso() && dano.after(dtaxa2)) || (ano != e.getAnoIngresso() && dano.after(dtaxa3))) {
                 if (!usr.getUestudante()) {
                     if (ano != e.getAnoIngresso()) {//if (ms > 1) {
-                        Clients.showNotification("O periodo de Inscricao para os antigos Estudantes esta encerrado! Esta Inscrição será submetida ao Director", "warning", null, null, 0);
+                        Clients.showNotification("O periodo de Inscricao para os antigos Estudantes esta encerrado! Esta Inscriï¿½ï¿½o serï¿½ submetida ao Director", "warning", null, null, 0);
                     } else {
-                        Clients.showNotification("O periodo de Inscricao para novos Ingressos esta encerrado! Esta Inscrição será submetida ao Director", "warning", null, null, 0);
+                        Clients.showNotification("O periodo de Inscricao para novos Ingressos esta encerrado! Esta Inscriï¿½ï¿½o serï¿½ submetida ao Director", "warning", null, null, 0);
                     }
                     prazo.setVisible(true);
                     prazoinsc.setVisible(true);
                     rwmulta.setVisible(true);
                     ibmulta.setValue(0);
                 } else {
-                    Clients.showNotification("O periodo de Inscrição incerrado, Contacte a direção!", "warning", null, null, 0);
+                    Clients.showNotification("O periodo de Inscriï¿½ï¿½o incerrado, Contacte a direï¿½ï¿½o!", "warning", null, null, 0);
                     winAddInscricao.detach();
                 }
             }
@@ -1142,19 +1142,19 @@ public class InscricaoController extends GenericForwardComposer {
             dtaxa2 = pal.getDataFimE2();
             dtaxa3 = pal.getDi1();
             if (dano.before(dtaxa1)) {
-                Clients.showNotification("Por favor aguarde o periodo de Inscrição!", "warning", null, null, 0);
+                Clients.showNotification("Por favor aguarde o periodo de Inscriï¿½ï¿½o!", "warning", null, null, 0);
                 limpaLB(discEstOp);
                 limpaLB(discSel);
                 winAddInscricao.detach();
             } else if (dano.after(dtaxa3)) {
                 if (!usr.getUestudante()) {
-                    Clients.showNotification("O periodo de Inscrição esta encerrado! Esta Inscrição será submetida ao Director", "warning", null, null, 0);
+                    Clients.showNotification("O periodo de Inscriï¿½ï¿½o esta encerrado! Esta Inscriï¿½ï¿½o serï¿½ submetida ao Director", "warning", null, null, 0);
                     prazo.setVisible(true);
                     prazoinsc.setVisible(true);
                     rwmulta.setVisible(true);
                     ibmulta.setValue(0);
                 } else {
-                    Clients.showNotification("O periodo de Inscrição incerrado, Contacte a direção!", "warning", null, null, 0);
+                    Clients.showNotification("O periodo de Inscriï¿½ï¿½o incerrado, Contacte a direï¿½ï¿½o!", "warning", null, null, 0);
                     winAddInscricao.detach();
                 }
             }
@@ -1482,7 +1482,7 @@ public class InscricaoController extends GenericForwardComposer {
             }
             Listitem list = new Listitem();
             Listcell lc = new Listcell();
-            Label le = new Label(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc());
+            Label le = new Label(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc());
             le.setParent(lc);
             lc.setParent(list);
             list.setValue(d);
@@ -1498,7 +1498,7 @@ public class InscricaoController extends GenericForwardComposer {
 //            if (d.getNatraso() != null && d.getNatraso().contains(e.getAnoIngresso() + "")) {
 //                d.setNivel(nivelactual);
 //            }
-            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc(), d);
+            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc(), d);
             list.setDisabled(true);
             list.setCheckable(false);
             discSel.setMultiple(false);
@@ -1564,7 +1564,7 @@ public class InscricaoController extends GenericForwardComposer {
         Boolean nmenor2 = false;
         List<Integer> niv = new ArrayList<Integer>();
         if (discEst.getSelectedItems().isEmpty() && discEstOp.getSelectedItems().isEmpty()) {
-            Clients.showNotification("Seleccione as disciplinas para a inscrição", "error", null, null, 0);
+            Clients.showNotification("Seleccione as disciplinas para a inscriï¿½ï¿½o", "error", null, null, 0);
             return;
         }
         if (Integer.parseInt(lbcred.getValue()) > 48) {
@@ -1576,14 +1576,14 @@ public class InscricaoController extends GenericForwardComposer {
             if (ni > this.n) {//nmenor1 == false && 
                 nmenor1 = nivelMenor(ni);
                 if (!nmenor1) {
-                    Clients.showNotification("Por favor, Primeiro Seleccione as disciplinas dos Níveis em atraso", "error", null, null, 0);
+                    Clients.showNotification("Por favor, Primeiro Seleccione as disciplinas dos Nï¿½veis em atraso", "error", null, null, 0);
                     return;
                 }
             }
             if (ni == this.n) {//nmenor2 == false && 
                 nmenor2 = nivelMenor(ni);
                 if (!nmenor2) {
-                    Clients.showNotification("Por favor, Primeiro Seleccione as disciplinas dos Níveis em atraso", "error", null, null, 0);
+                    Clients.showNotification("Por favor, Primeiro Seleccione as disciplinas dos Nï¿½veis em atraso", "error", null, null, 0);
                     return;
                 }
             }
@@ -1775,7 +1775,7 @@ public class InscricaoController extends GenericForwardComposer {
         }
         if (discEst.getItemCount() > 0 && discEst.getSelectedCount() != discEst.getItemCount()) {
             discEstOp.clearSelection();
-            Clients.showNotification("Primeiro seleccione todas disciplinas prioritárias", "error", null, null, 0);
+            Clients.showNotification("Primeiro seleccione todas disciplinas prioritï¿½rias", "error", null, null, 0);
         } else {
             for (Listitem ide : discEstOp.getSelectedItems()) {
                 i = i + ((Disciplina) ide.getValue()).getCredito();
@@ -1983,13 +1983,13 @@ public class InscricaoController extends GenericForwardComposer {
                 }
                 lb.setMultiple(true);
             }
-            Clients.showNotification("Inscrição efectuada com sucesso", null, null, null, 2000);
+            Clients.showNotification("Inscriï¿½ï¿½o efectuada com sucesso", null, null, null, 2000);
             calcularNiveFreq(e);//calcular nivel de frequencia, apartir do nivel em que estou
         } else {
             if (((Window) winAddInscricao.getParent()).inModal()) {
-                Clients.showNotification("O seu pedido de Inscrição foi efectuada com sucesso, Aguarde a confirmação via e-mail", null, null, null, 2000);
+                Clients.showNotification("O seu pedido de Inscriï¿½ï¿½o foi efectuada com sucesso, Aguarde a confirmaï¿½ï¿½o via e-mail", null, null, null, 2000);
             } else {
-                Clients.showNotification("O seu pedido de Inscrição foi efectuada com sucesso", null, null, null, 2000);
+                Clients.showNotification("O seu pedido de Inscriï¿½ï¿½o foi efectuada com sucesso", null, null, null, 2000);
             }
 
             i = csimpm.load(Inscricao.class, i.getIdInscricao());
@@ -2431,7 +2431,7 @@ public class InscricaoController extends GenericForwardComposer {
 //        Button btn = (Button) evt.getOrigin().getTarget();
 //        Listitem litem = (Listitem) btn.getParent().getParent();
         if (lbinscricao.getSelectedCount() == 0) {
-            Clients.showNotification("Selecione Disciplinas de um único estudante", "error", null, null, 3000);
+            Clients.showNotification("Selecione Disciplinas de um ï¿½nico estudante", "error", null, null, 3000);
             return;
         }
         limpaLB(lbin);
@@ -2449,7 +2449,7 @@ public class InscricaoController extends GenericForwardComposer {
             Listitem li = itemsi.next();
             Inscricaodisciplina idiscip = (Inscricaodisciplina) li.getValue();
             if (idiscip.getAnulacao() != null || (usr.getUestudante() && (!idiscip.getInscricao().getEstado()))) {
-                Clients.showNotification("Selecionou uma Inscricao que esta anulada ou esta aguardando confirmação...\n Tente de novo!", "error", null, null, 0);
+                Clients.showNotification("Selecionou uma Inscricao que esta anulada ou esta aguardando confirmaï¿½ï¿½o...\n Tente de novo!", "error", null, null, 0);
                 if (usr.getUestudante()) {
                     getListInscricaoModel2();
                 } else {
@@ -2462,7 +2462,7 @@ public class InscricaoController extends GenericForwardComposer {
             int s = ((Inscricaodisciplina) li.getValue()).getInscricao().getSemestre().intValue();
             PlanificacaoAnoLectivo pa = csimpm.findEntByJPQuery("from PlanificacaoAnoLectivo", null);
             if (usr.getUestudante() && (s == 1 && d.before(pa.getDataInicioMatricula()) || (s == 2 && d.before(pa.getDatainicioInscricao2())))) {
-                Clients.showNotification("Não se pode anular Inscrições dos Semestres anteriores...\n Tente de novo!", "error", null, null, 0);
+                Clients.showNotification("Nï¿½o se pode anular Inscriï¿½ï¿½es dos Semestres anteriores...\n Tente de novo!", "error", null, null, 0);
                 if (usr.getUestudante()) {
                     getListInscricaoModel2();
                 } else {
@@ -2475,7 +2475,7 @@ public class InscricaoController extends GenericForwardComposer {
                 id = (Inscricaodisciplina) li.getValue();
             }
             if (id.getInscricao().getIdEstudante() != ((Inscricaodisciplina) li.getValue()).getInscricao().getIdEstudante()) {
-                Clients.showNotification("So poderá anular Inscrições de um único estudante", "error", null, null, 0);
+                Clients.showNotification("So poderï¿½ anular Inscriï¿½ï¿½es de um ï¿½nico estudante", "error", null, null, 0);
                 if (usr.getUestudante()) {
                     getListInscricaoModel2();
                 } else {
@@ -2497,7 +2497,7 @@ public class InscricaoController extends GenericForwardComposer {
         final Disciplinaanulada da = new Disciplinaanulada();
         da.setDataanulacao(new Date());
         da.setMotivo(txMotivo.getText());
-        Messagebox.show("Pretende anular estas disciplinas?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Pretende anular estas disciplinas?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws IOException {
@@ -2538,7 +2538,7 @@ public class InscricaoController extends GenericForwardComposer {
                                 da.setDataanulacao(dano);
                                 if (usr.getUestudante()) {
                                     if (dano.after(dinsc)) {
-                                        Clients.showNotification("So podera anular uma disciplina dentro de 4 semanas após o inicio de aulas", "warning", null, null, 0);
+                                        Clients.showNotification("So podera anular uma disciplina dentro de 4 semanas apï¿½s o inicio de aulas", "warning", null, null, 0);
                                         return;
                                     }
                                     if (!lbc.isDisabled()) {
@@ -2577,14 +2577,14 @@ public class InscricaoController extends GenericForwardComposer {
                                 lb.clearSelection();
                                 Faculdade f = csimpm.get(Faculdade.class, usr.getFaculdade().getIdFaculdade());
                                 if (usr.getUestudante()) {
-                                    Clients.showNotification("Pedido de Anulação enviado com sucesso", null, null, null, 2000);
+                                    Clients.showNotification("Pedido de Anulaï¿½ï¿½o enviado com sucesso", null, null, null, 2000);
                                     // getListInscricaoModel2();
                                     eq = EventQueues.lookup("pinscA" + f.getIdFaculdade(), EventQueues.APPLICATION, true);
                                     eq.publish(new Event("onPedidoMatD", null, da));
 //                                    eq = EventQueues.lookup("pinscA" + da.getIdEstudante().getIdEstudante(), EventQueues.APPLICATION, true);
 //                                    eq.publish(new Event("onPedidoMatD", null, da));
                                 } else {
-                                    Clients.showNotification("Inscrição Anulada com sucesso", null, null, null, 2000);
+                                    Clients.showNotification("Inscriï¿½ï¿½o Anulada com sucesso", null, null, null, 2000);
                                 }
                                 eq = EventQueues.lookup("anula" + f.getIdFaculdade(), EventQueues.APPLICATION, true);
                                 eq.publish(new Event("onPedidoMat", null, da));
@@ -2705,7 +2705,7 @@ public class InscricaoController extends GenericForwardComposer {
         }
         t.setRows(10);
         t.setParent(w);
-        w.setTitle("Motivo da Rejeição");
+        w.setTitle("Motivo da Rejeiï¿½ï¿½o");
         w.setClosable(true);
         w.setHflex("min");
         w.setVflex("min");
@@ -2741,7 +2741,7 @@ public class InscricaoController extends GenericForwardComposer {
         });
         b.setAttribute("apply", "esira.inscricao.InscricaoController");
         b.setParent(vb);
-        w.setTitle("Motivo da Anulação");
+        w.setTitle("Motivo da Anulaï¿½ï¿½o");
         w.setId("winx");
         w.setClosable(true);
         w.setHflex("min");
@@ -2759,7 +2759,7 @@ public class InscricaoController extends GenericForwardComposer {
         Intbox it = (Intbox) evt.getTarget().getParent().getChildren().get(1);
         Disciplinaanulada da = csimpm.load(Disciplinaanulada.class, it.getValue());
         if (da.getDoc() == null) {
-            Clients.showNotification("Não existe documento", "warning", null, null, 2000);
+            Clients.showNotification("Nï¿½o existe documento", "warning", null, null, 2000);
             return;
         }
         String nre = da.getInscricaodisciplinaList().get(0).getInscricao().getIdEstudante().getNrEstudante();
@@ -2770,7 +2770,7 @@ public class InscricaoController extends GenericForwardComposer {
         Media pp = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), iss);
         Media mm = new AMedia(sss, FilenameUtils.getExtension(sss), URLConnection.guessContentTypeFromName(sss), pp.getByteData());
         Window win = (Window) Executions.createComponents("/report.zul", null, null);
-        win.setTitle("Requerimento/Anulação");
+        win.setTitle("Requerimento/Anulaï¿½ï¿½o");
         Iframe iframe = (Iframe) win.getFellow("report");
 //        org.zkoss.util.media.Media m = (org.zkoss.util.media.Media) ((Listitem) self.getParent().getParent()).getValue();
 //        org.zkoss.util.media.Media amedia = new org.zkoss.util.media.AMedia(m.getName(), m.getFormat(), m.getContentType(), m.getStreamData());
@@ -3059,7 +3059,7 @@ public class InscricaoController extends GenericForwardComposer {
 
     public void onExcelExport() throws ParseException {
         if (lbinscricao.getItemCount() == 0) {
-            Clients.showNotification("Sem conteúdo", "warning", null, null, 3000);
+            Clients.showNotification("Sem conteï¿½do", "warning", null, null, 3000);
             return;
         }
         BeanToExcel beanToExcel = new BeanToExcel();
@@ -3197,7 +3197,7 @@ public class InscricaoController extends GenericForwardComposer {
 //        LockMode l = csimpm.bloqueado(insc);
 //        Clients.showNotification(l.toString(), "warning", null, null, 0, true);
 //        if (l.compareTo(LockMode.PESSIMISTIC_WRITE) == 0) {
-//            Clients.showNotification("Esta Inscrição esta sendo Validada por outro utilizador", "warning", null, null, 0);
+//            Clients.showNotification("Esta Inscriï¿½ï¿½o esta sendo Validada por outro utilizador", "warning", null, null, 0);
 //            return;
 //        } else {
 //            //insc = csimpm.getLocked(Inscricao.class,insc.getIdInscricao());
@@ -3208,7 +3208,7 @@ public class InscricaoController extends GenericForwardComposer {
 //        Clients.showNotification(l.toString(), "warning", null, null, 0, true);
 //        insc = csimpm.load(Inscricao.class, insc.getIdInscricao());
 //        if (insc.getModoInscricao().intValue() > 2) {
-//            Clients.showNotification("Esta Inscricao será validada pelo Director! Caso for aceite, poderá ser visualizada na Lista de Inscrições", "warning", null, null, 0);
+//            Clients.showNotification("Esta Inscricao serï¿½ validada pelo Director! Caso for aceite, poderï¿½ ser visualizada na Lista de Inscriï¿½ï¿½es", "warning", null, null, 0);
 //            return;
 //        }
         win.setParent(winInscricao);
@@ -3246,7 +3246,7 @@ public class InscricaoController extends GenericForwardComposer {
         Listbox discs = ((Listbox) win.getFellow("discSel"));
         limpaLB(discs);
         for (Disciplina d : lds) {
-            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
+            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
 //            list.setDisabled(true);
 //            list.setCheckable(false);
 //            discs.setMultiple(false);
@@ -3409,7 +3409,7 @@ public class InscricaoController extends GenericForwardComposer {
         });
         b.setAttribute("apply", "esira.inscricao.InscricaoController");
         b.setParent(vb);
-        w.setTitle("Observações");
+        w.setTitle("Observaï¿½ï¿½es");
         w.setId("winx");
         w.setClosable(true);
         w.setHflex("min");
@@ -3424,7 +3424,7 @@ public class InscricaoController extends GenericForwardComposer {
         final Inscricao m = csimpm.load(Inscricao.class, it.getValue().longValue());
         Textbox obs = (Textbox) evt.getTarget().getParent().getChildren().get(0);
         m.setObs(obs.getValue());
-        Messagebox.show("Actualizar?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+        Messagebox.show("Actualizar?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                 new EventListener() {
                     @Override
                     public void onEvent(Event evet) throws IOException {
@@ -3524,7 +3524,7 @@ public class InscricaoController extends GenericForwardComposer {
                 Listitem li = new Listitem();
                 Listcell lc = new Listcell();
                 Label le = new Label();
-                le.setValue(d.getNome() + " - " + d.getNivel() + "º Ano" + " - " + d.getSemestre() + "º Sem-" + d.getCredito() + " Credito - " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc());
+                le.setValue(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano" + " - " + d.getSemestre() + "ï¿½ Sem-" + d.getCredito() + " Credito - " + d.getCurso().getAbreviatura() + "-" + d.getPlanoc());
                 le.setStyle("color: #008080");
                 le.setParent(lc);
                 lc.setParent(li);

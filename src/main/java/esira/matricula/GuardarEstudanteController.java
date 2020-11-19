@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -1317,7 +1317,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
                     if (nrmec.getValue().length() < 11) {
                         tabDadosPessoais.setSelected(true);
                         Clients.scrollIntoView(nrmec);
-                        Clients.showNotification("Para o Nr. Mec., introduza no mínimo 11 digitos", "error", null, null, 0);
+                        Clients.showNotification("Para o Nr. Mec., introduza no mï¿½nimo 11 digitos", "error", null, null, 0);
                         return;
                     }
                     estudante.setNrEstudante(nrmec.getValue());
@@ -1478,7 +1478,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
             final Long id = estudante.getIdEstudante();
 //            if (!usr.getUestudante() && ((estudante.getTransferido() != null && estudante.getTransferido().intValue() == 0)
 //                    || (estudante.getMudancac() != null && estudante.getMudancac().intValue() == 0))) {
-//                Messagebox.show("Registar a Equivalência das Disciplinas", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//                Messagebox.show("Registar a Equivalï¿½ncia das Disciplinas", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                        new EventListener() {
 //                            @Override
 //                            public void onEvent(Event evet) throws InterruptedException {
@@ -1520,7 +1520,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
                     if (nrmec.getValue().length() < 11) {
                         tabDadosPessoais.setSelected(true);
                         Clients.scrollIntoView(nrmec);
-                        Clients.showNotification("Para o Nr. Mec., introduza no mínimo 11 digitos", "error", null, null, 0);
+                        Clients.showNotification("Para o Nr. Mec., introduza no mï¿½nimo 11 digitos", "error", null, null, 0);
                         return;
                     }
                     estudante.setNrEstudante(nrmec.getValue());
@@ -1664,7 +1664,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
             final Long id = mat.getEstudante().getIdEstudante();
 //            if (!usr.getUestudante() && ((estudante.getTransferido() != null && estudante.getTransferido().intValue() == 0)
 //                    || (estudante.getMudancac() != null && estudante.getMudancac().intValue() == 0))) {
-//                Messagebox.show("Registar a Equivalência das Disciplinas", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+//                Messagebox.show("Registar a Equivalï¿½ncia das Disciplinas", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
 //                        new EventListener() {
 //                            @Override
 //                            public void onEvent(Event evet) throws InterruptedException {
@@ -1936,7 +1936,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
     public void onRejeitar(ForwardEvent event) throws IOException {
         winAddMotivo.setParent(mDialogMatricula);
         winAddMotivo.doModal();
-        ((Textbox) winAddMotivo.getFellow("txMotivoR")).setText("A sua matricula foi rejeitada.\n Os seus dados estão incorrectos");
+        ((Textbox) winAddMotivo.getFellow("txMotivoR")).setText("A sua matricula foi rejeitada.\n Os seus dados estï¿½o incorrectos");
     }
 
     public void onBtnC() {
@@ -2111,7 +2111,7 @@ public class GuardarEstudanteController extends GenericForwardComposer {
                 c = (Curso) cbcurso.getSelectedItem().getValue();
             }
             nrmec.setValue(gerarNrMecanografico(c));
-            nrmec.setConstraint(" no Empty: Introduza o nr Mecanográfico!");
+            nrmec.setConstraint(" no Empty: Introduza o nr Mecanogrï¿½fico!");
         }
     }
 

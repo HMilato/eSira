@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.controller;
 
@@ -54,7 +54,7 @@ public class NovaSenhaController extends SelectorComposer<Component> {
     @Wire
     Date token_expirar;
     Map<String, Object> par = new HashMap<String, Object>();
-    String msgErro = "Desculpa, mas este link ja nao é valido, tente novamente!";
+    String msgErro = "Desculpa, mas este link ja nao ï¿½ valido, tente novamente!";
     String msgSucesso = "Parabens! Senha Recuperada Com Sucesso! Clique em Voltar para logar com a nova senha";
 
     @Override

@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.inscricao;
 
@@ -252,7 +252,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
 //    public void onCreate$winInscricaoP(Event evt) {
 //        if (winInscricaoP.inModal()) {
 //            winInscricaoP.setMode("modal");
-//            winInscricaoP.setTitle("Validação de Inscrições");
+//            winInscricaoP.setTitle("Validaï¿½ï¿½o de Inscriï¿½ï¿½es");
 //            winInscricaoP.setClosable(true);
 //            winInscricaoP.setVflex("1");
 //            winInscricaoP.setHflex("1");
@@ -327,7 +327,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
                 if (i.getInscricaodisciplinaList().get(0).getNotaFinal() != null) {
                     nota = i.getInscricaodisciplinaList().get(0).getNotaFinal() + "";
                 }
-                Listitem list = new Listitem(i.getIdEstudante().getNomeCompleto() + " - " + i.getIdEstudante().getNivelFrequencia() + "º Ano" + " Nota Final: " + nota, i);
+                Listitem list = new Listitem(i.getIdEstudante().getNomeCompleto() + " - " + i.getIdEstudante().getNivelFrequencia() + "ï¿½ Ano" + " Nota Final: " + nota, i);
                 discs.appendChild(list);
             }
         } else if (insc.getModoInscricao().intValue() == 7) {
@@ -363,7 +363,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
             }
             for (Inscricaodisciplina id : lds) {
                 Disciplina di = id.getDisciplina();
-                Listitem list = new Listitem(di.getNome() + " - " + di.getNivel() + "º Ano - " + di.getSemestre() + "º Sem - " + id.getNotaFinal() + " Valores", di);
+                Listitem list = new Listitem(di.getNome() + " - " + di.getNivel() + "ï¿½ Ano - " + di.getSemestre() + "ï¿½ Sem - " + id.getNotaFinal() + " Valores", di);
                 discs.appendChild(list);
             }
         } else if (insc.getModoInscricao().intValue() == 9) {
@@ -404,8 +404,8 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
             Listbox discs = ((Listbox) w.getFellow("discSelp"));
             limpaLB(discs);
             for (Inscricaodisciplina d : lids) {
-                // Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
-                Listitem list = new Listitem(d.getDisciplina().getNome() + " - " + d.getDisciplina().getNivel() + "º Ano - " + d.getDisciplina().getSemestre() + "º Sem - " + d.getDisciplina().getCredito() + "Nota Final: " + d.getNotaFinal() + " Credito", d);
+                // Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
+                Listitem list = new Listitem(d.getDisciplina().getNome() + " - " + d.getDisciplina().getNivel() + "ï¿½ Ano - " + d.getDisciplina().getSemestre() + "ï¿½ Sem - " + d.getDisciplina().getCredito() + "Nota Final: " + d.getNotaFinal() + " Credito", d);
 ////            list.setDisabled(true);
 ////            list.setCheckable(false);
 ////            discs.setMultiple(false);
@@ -478,7 +478,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
             Listbox discs = ((Listbox) w.getFellow("discSeld"));
             limpaLB(discs);
             for (Disciplina d : lds) {
-                Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
+                Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
 ////            list.setDisabled(true);
 ////            list.setCheckable(false);
 ////            discs.setMultiple(false);
@@ -715,7 +715,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
 //                + " id where id.inscricao.idEstudante = :ide and id.inscricao.semestre = :semestre and "
 //                + "extract(year from id.inscricao.dataInscricao) = :ano)", par);
 //        for (Disciplina d : lds) {
-//            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "º Ano - " + d.getSemestre() + "º Sem - " + d.getCredito() + " Credito", d);
+//            Listitem list = new Listitem(d.getNome() + " - " + d.getNivel() + "ï¿½ Ano - " + d.getSemestre() + "ï¿½ Sem - " + d.getCredito() + " Credito", d);
 //            list.setDisabled(true);
 //            list.setCheckable(false);
 //            discSel.setMultiple(false);
@@ -730,7 +730,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
         int a = 0;
         List<Integer> niv = new ArrayList<Integer>();
 //        if (discEst.getSelectedItems().isEmpty() && discEstOp.getSelectedItems().isEmpty()) {
-//            Clients.showNotification("Seleccione as disciplinas para a inscrição", "error", null, null, 0);
+//            Clients.showNotification("Seleccione as disciplinas para a inscriï¿½ï¿½o", "error", null, null, 0);
 //            return;
 //        }
 //        if (Integer.parseInt(lbcred.getValue()) > 30) {
@@ -990,7 +990,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
 //        par.put("ide", mpk);
 //        Matricula m = (Matricula) csimpm.findEntByJPQuery("from Matricula m where m.matriculaPK=:ide", par);
 //        if (m != null && (m.getConfirmacao() == null || m.getEstado() == false)) {
-//            Clients.showNotification(" Antes de validar uma inscriçaão, é necessário validar a matricula", "warning", null, null, 0);
+//            Clients.showNotification(" Antes de validar uma inscriï¿½aï¿½o, ï¿½ necessï¿½rio validar a matricula", "warning", null, null, 0);
 //            return;
 //        }
         Messagebox.show("Pretende validar este Pedido de Inscricao?", "", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
@@ -1016,7 +1016,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
                                             i.setVersion(new Short(ver + ""));
                                         }
                                     } else {
-                                        Clients.showNotification("Esta Inscrição ja foi Validada por outro utilizador", "warning", null, null, 0);
+                                        Clients.showNotification("Esta Inscriï¿½ï¿½o ja foi Validada por outro utilizador", "warning", null, null, 0);
                                         t.rollback();
                                         win.detach();
                                         return;
@@ -1125,9 +1125,9 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
 //                                try {
 //                                    String path = winInscricaoP.getDesktop().getWebApp().getRealPath("/img");
 //                                    new Email().sendEmailReciboInsc(UserAutentic.getEmailP("email"),
-//                                            i.getIdEstudante().getEmail(), "Validação de Inscrição", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
-//                                            + "\nA sua Inscrição foi validada com Sucesso\n\n----------------------------------------"
-//                                            + "Registo Acadêmico - UniLúrio-" + u.getFaculdade().getDesricao(),
+//                                            i.getIdEstudante().getEmail(), "Validaï¿½ï¿½o de Inscriï¿½ï¿½o", "Prezado " + i.getIdEstudante().getNomeCompleto() + ""
+//                                            + "\nA sua Inscriï¿½ï¿½o foi validada com Sucesso\n\n----------------------------------------"
+//                                            + "Registo Acadï¿½mico - UniLï¿½rio-" + u.getFaculdade().getDesricao(),
 //                                            UserAutentic.getEmailP("senha"), path + "/icoul.png", i, i.getInscricaodisciplinaList());
 //                                } catch (EmailException uh) {
 //                                    Clients.showNotification("O Envio de e-mail Falhou!", "warning", null, null, 0, true);
@@ -1346,7 +1346,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
 
     public void onRejeitar(ForwardEvent event) throws IOException {
         Window w = (Window) Executions.createComponents("/inscricao/MotivoInsc.zul", win, null);
-        ((Textbox) w.getFellow("txMotivoR")).setText("Inscrição foi rejeitada.\n Dados estão incorrectos");
+        ((Textbox) w.getFellow("txMotivoR")).setText("Inscriï¿½ï¿½o foi rejeitada.\n Dados estï¿½o incorrectos");
     }
 
     public void onBtnC() {
@@ -1378,7 +1378,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
                                             i.setVersion(new Short(ver + ""));
                                         }
                                     } else {
-                                        Clients.showNotification("Esta Inscrição ja foi Validada por outro utilizador", "warning", null, null, 0);
+                                        Clients.showNotification("Esta Inscriï¿½ï¿½o ja foi Validada por outro utilizador", "warning", null, null, 0);
                                         t.rollback();
                                         // win.detach();
                                         winAddMotivo.getParent().detach();
@@ -1419,7 +1419,7 @@ public class PedidoInscricaoController2 extends GenericForwardComposer {
                                     } else {
                                         csimpm.deletes(i);
                                     }
-                                    Clients.showNotification("Iscrição Rejeitada com Sucesso", null, null, null, 2000);
+                                    Clients.showNotification("Iscriï¿½ï¿½o Rejeitada com Sucesso", null, null, null, 2000);
                                     t.commit();
                                     while (!t.wasCommitted())
             ;

@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.service;
 
@@ -53,12 +53,12 @@ public class Email {
         //Utilize o hostname do seu provedor de email
         // System.out.println("alterando hostname...");
         email.setHostName("smtp.gmail.com");
-        //Quando a porta utilizada não é a padrão (gmail = 465)
+        //Quando a porta utilizada nï¿½o ï¿½ a padrï¿½o (gmail = 465)
         email.setSmtpPort(465);
-        //Adicione os destinatários
+        //Adicione os destinatï¿½rios
         // email.addTo("xxx@xxx.com", "Jose");
         email.addTo(to);
-        //Configure o seu email do qual enviará
+        //Configure o seu email do qual enviarï¿½
         email.setFrom(from, from.substring(from.indexOf('@') + 1));
         //Messagebox.show(from.substring(from.indexOf('@')+1));
         //Adicione um assunto
@@ -68,7 +68,7 @@ public class Email {
 //        esira.service.ReciboPDF rp = new  esira.service.ReciboPDF();
 //        DataSource ds = rp.reciboMatricula(img,null);
 //        email.attach(ds, "recibo", "Recibo da Matricula");
-        //Para autenticar no servidor é necessário chamar os dois métodos abaixo
+        //Para autenticar no servidor ï¿½ necessï¿½rio chamar os dois mï¿½todos abaixo
         //   System.out.println("autenticando...");
         email.setSSL(true);
         email.setAuthentication(from, senha);

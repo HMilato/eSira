@@ -1,6 +1,6 @@
 /*
  * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.matricula;
 
@@ -91,12 +91,12 @@ public class AnularMatriculaController extends GenericForwardComposer {
     public void onRegAnulacao() throws IOException {
 
         if (validar()) {
-            erroValidacao.setValue("Alguns Campos estão vazios. Preencha Todos os campos");
+            erroValidacao.setValue("Alguns Campos estï¿½o vazios. Preencha Todos os campos");
         } else {
             if (validarAnoVolta()) {
-                erroValidacao.setValue("O ano de Volta está fora dos parámetros");
+                erroValidacao.setValue("O ano de Volta estï¿½ fora dos parï¿½metros");
             } else {
-                Messagebox.show("Pretende anular esta Matricula?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
+                Messagebox.show("Pretende anular esta Matricula?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.QUESTION,
                         new EventListener() {
                             @Override
                             public void onEvent(Event evet) throws IOException {
@@ -140,10 +140,10 @@ public class AnularMatriculaController extends GenericForwardComposer {
                                                         + "extract(year from id.inscricao.dataInscricao) = :a and (id.notaFinal is null or id.notaFinal < 10) and "
                                                         + "id.disciplinaActiva = 3", par);
                                                 if (!lid.isEmpty()) {
-                                                    Messagebox.show("As Inscrições feitas no 2o Semestre serão anuladas.\n"
-                                                            + "Para não anular as Inscrições feitas no 2o Semestre, Por favor introduza as notas Finais,"
+                                                    Messagebox.show("As Inscriï¿½ï¿½es feitas no 2o Semestre serï¿½o anuladas.\n"
+                                                            + "Para nï¿½o anular as Inscriï¿½ï¿½es feitas no 2o Semestre, Por favor introduza as notas Finais,"
                                                             + "se estiverem disponiveis\n\n"
-                                                            + "CONTINUAR?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
+                                                            + "CONTINUAR?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
                                                             new EventListener() {
                                                                 @Override
                                                                 public void onEvent(Event evet) throws IOException {
@@ -166,10 +166,10 @@ public class AnularMatriculaController extends GenericForwardComposer {
                                                         + "extract(year from id.inscricao.dataInscricao) = :a and (id.notaFinal is null or id.notaFinal < 10) and "
                                                         + "id.disciplinaActiva = 3", par);
                                                 if (!lid.isEmpty()) {
-                                                    Messagebox.show("As Inscrições feitas no 1o Semestre serão anuladas.\n"
-                                                            + "Para não anular as Inscrições feitas no 1o Semestre, Por favor introduza as notas Finais,"
+                                                    Messagebox.show("As Inscriï¿½ï¿½es feitas no 1o Semestre serï¿½o anuladas.\n"
+                                                            + "Para nï¿½o anular as Inscriï¿½ï¿½es feitas no 1o Semestre, Por favor introduza as notas Finais,"
                                                             + "se estiverem disponiveis\n\n"
-                                                            + "CONTINUAR?", "Atenção", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
+                                                            + "CONTINUAR?", "Atenï¿½ï¿½o", Messagebox.YES | Messagebox.NO, Messagebox.EXCLAMATION,
                                                             new EventListener() {
                                                                 @Override
                                                                 public void onEvent(Event evet) throws IOException {
@@ -263,8 +263,8 @@ public class AnularMatriculaController extends GenericForwardComposer {
             Listitem li = ((Listbox) win.getParent().getFellow("lbEstudantes")).getItemAtIndex(idlitem.getValue());
             new Listbox().appendChild(li);
         } else {
-            Clients.showNotification("Pedido de Anulação de Matricula Enviado com sucesso", null, null, null, 2000);
-            lba.setValue("O Seu pedido para anular a Matricula foi enviado. \n Por favor aguarde a confirmação...");
+            Clients.showNotification("Pedido de Anulaï¿½ï¿½o de Matricula Enviado com sucesso", null, null, null, 2000);
+            lba.setValue("O Seu pedido para anular a Matricula foi enviado. \n Por favor aguarde a confirmaï¿½ï¿½o...");
             ((Button) win.getParent().getFellow("btnAnular")).setDisabled(true);
         }
         win.detach();

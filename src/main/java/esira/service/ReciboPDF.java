@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template in the editorr.
  */
 package esira.service;
 
@@ -135,7 +135,7 @@ public class ReciboPDF {
 //        ByteArrayOutputStream stream = new ByteArrayOutputStream();
 //        PdfWriter.getInstance(document, stream);
 //
-//        document.open(); // adicionando um parágrafo no documento 
+//        document.open(); // adicionando um parï¿½grafo no documento 
 //        document.add(figura);
 //        document.addAuthor("UniLurio");
 //        document.add(new Paragraph("Recibo de Matricula"));
@@ -174,13 +174,13 @@ public class ReciboPDF {
 //        document.add(texto);
 //
 //        texto = new Paragraph();
-//        frase = new Phrase("Data de Inscrição, ", fontNegrito);
+//        frase = new Phrase("Data de Inscriï¿½ï¿½o, ", fontNegrito);
 //        frase.add(new Chunk(new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(i.getDataInscricao()), fontNormal));
 //        texto.add(frase);
 //        document.add(texto);
 //        ////
 ////        texto = new Paragraph();
-////        frase = new Phrase("Data de Confirmação, ", fontNegrito);
+////        frase = new Phrase("Data de Confirmaï¿½ï¿½o, ", fontNegrito);
 ////        frase.add(new Chunk(new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(i.getDataConfirmacao()), fontNormal));
 ////        texto.add(frase);
 ////        document.add(texto);
